@@ -70,8 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
-
     // Start observing the document
     observer.observe(document.body, { childList: true, subtree: true });
 });
