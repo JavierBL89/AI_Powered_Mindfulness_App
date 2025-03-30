@@ -1,8 +1,8 @@
 import os
 import requests
 from flask import jsonify
-
 from dotenv import load_dotenv
+
 load_dotenv()  # ⬅️ This loads your .env values
 
 HF_TOKEN = os.getenv("HF_TOKEN")
@@ -11,13 +11,14 @@ HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
 
 def mood_analizer(user_input):
+    
+    if not isinstance(user_input, str) or not user_input:
+        return jsonify({
+            "status": "error",
+            "message": "Input must be a non-empty string."
+        }), 400
+    
     try:
-        if not isinstance(user_input, str) or not user_input:
-            return jsonify({
-                "status": "error",
-                "message": "Input must be a non-empty string."
-            }), 400
-
         response = requests.post(API_URL, headers=HEADERS, json={"inputs": user_input})
         result = response.json()
 

@@ -17,7 +17,7 @@ HEADERS = {"Authorization": f"Bearer {HUGGING_FACE_TOKEN}"}
 def query_llama(prompt):
     
     #To enhance relevance, consider providing better prompts,
-    prompt = f"<s>[INST] Answer concisely and factually. Only respond as the bot.\n\nUser: {prompt} [/INST]"
+    prompt = f"Answer concisely and factually. Only respond as the bot.:\n\nUser: {prompt}\nBot:"
 
     data = {"inputs": prompt}
     response = requests.post(API_URL, headers=HEADERS, json=data)

@@ -115,9 +115,13 @@ def mood_tracker():
        
     # Perform mood anaylisys
     result_response = mood_analizer(user_input) # Model requires List[str]
+    # Safely handle tuple return
+    if isinstance(result_response, tuple):
+        result_response = result_response[0]
+
     # Convert response to JSON
-    result = result_response.get_json()  # Extract JSON data
-    
+    result = result_response.get_json()# Extract JSON data
+
     # Now safely access the 'mood'
     mood = result.get("mood", "Neutral")  # Default to 'Neutral' if not found
     confidence = result.get("confidence", 0.0)  # Default to 0.0 if not found  
