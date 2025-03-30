@@ -199,7 +199,7 @@
     caret-color: #007BFF;  /* Blue cursor */
 }
 
-#chatbot-response{
+#chatbot-body .chatbot-response{
     padding: 40px;
     max-width: 800px;
     margin: 0 auto;

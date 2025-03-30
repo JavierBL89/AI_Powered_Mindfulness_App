@@ -2,6 +2,9 @@ import requests
 import sys
 import os
 
+from dotenv import load_dotenv
+load_dotenv()  # ⬅️ This loads your .env values
+
 from content_scraper.content_scraper import fetch_content_from_urls
 from bs4 import BeautifulSoup
 from flask import Flask, request, jsonify

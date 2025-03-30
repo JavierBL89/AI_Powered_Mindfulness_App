@@ -3,6 +3,9 @@ from flask import Flask, request, jsonify
 import requests
 import os
 
+from dotenv import load_dotenv
+load_dotenv()  # ⬅️ This loads your .env values
+
 HUGGING_FACE_TOKEN = os.getenv("HF_TOKEN")
 
 if HUGGING_FACE_TOKEN is None:

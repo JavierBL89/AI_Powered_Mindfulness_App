@@ -2,6 +2,9 @@ import os
 import requests
 from flask import jsonify
 
+from dotenv import load_dotenv
+load_dotenv()  # ⬅️ This loads your .env values
+
 HF_TOKEN = os.getenv("HF_TOKEN")
 API_URL = "https://api-inference.huggingface.co/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english"
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}

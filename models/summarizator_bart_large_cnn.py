@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 import os
 import requests
-
+from dotenv import load_dotenv
+load_dotenv()  # ⬅️ This loads your .env values
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
