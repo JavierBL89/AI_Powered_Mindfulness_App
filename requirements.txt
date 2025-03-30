@@ -1,9 +1,12 @@
 blinker==1.9.0
+certifi==2025.1.31
+charset-normalizer==3.4.1
 click==8.1.8
 filelock==3.17.0
 Flask==3.1.0
 fsspec==2025.2.0
 gunicorn==23.0.0
+idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.5
 MarkupSafe==3.0.2
@@ -12,9 +15,11 @@ networkx==3.4.2
 numpy==2.2.2
 packaging==24.2
 pillow==11.1.0
+requests==2.32.3
 sympy==1.13.3
 torch==2.2.2
 torchaudio==2.2.2
 torchvision==0.17.2
 typing_extensions==4.12.2
+urllib3==2.3.0
 Werkzeug==3.1.3
