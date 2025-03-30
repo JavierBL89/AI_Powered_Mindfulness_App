@@ -1,3 +1,6 @@
+# NOT USED ON CURRENT APP
+
+
 1. Prerequisites
 API Key: You'll need an API key from OpenAI to access GPT-3. Sign up for OpenAI if you don’t already have an account.
 
