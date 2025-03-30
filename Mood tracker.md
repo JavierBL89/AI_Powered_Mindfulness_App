@@ -34,7 +34,7 @@ We use **distilbert-base-uncased-finetuned-sst-2-english**, a transformer-based 
 ```python
 from transformers import pipeline
 
-# Load model directly
+# Load model directly (If locally)
 tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased-finetuned-sst-2-english")
 model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased-finetuned-sst-2-english")
 #Load sentiment analysis model (DistilBERT fine-tuned on SST-2)
@@ -56,6 +56,11 @@ def mood_analizer(user_input):
             "NEGATIVE": "Sad / Negative"
           }
           mood = mood_mapping.get(mood_label, "Neutral")
+
+# Use Hugging Face API (App aproach)
+HF_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
+API_URL = "https://api-inference.huggingface.co/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english"
+HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 ```
 
 ---

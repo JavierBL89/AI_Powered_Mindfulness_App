@@ -22,14 +22,20 @@ We use **Facebook's BART-Large-CNN**, a transformer-based model designed for tex
 ```python
 from transformers import pipeline
 
-# Load Summarizer Model
+# Load Summarizer Model (if locally)
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 def summarize_text(text):
     summary = summarizer(text, min_length=30, max_length=300, do_sample=False)
     return summary[0]['summary_text']
-```
 
+
+# Use Hugging Face API (App aproach)
+HF_TOKEN = os.getenv("HF_TOKEN = os.getenv("HUGGING_FACE_TOKEN")")
+API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
+HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
+
+```
 ---
 
 ## 🚀 API Implementation

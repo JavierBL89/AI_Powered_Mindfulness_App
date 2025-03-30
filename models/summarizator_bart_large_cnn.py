@@ -1,18 +1,12 @@
 from flask import Flask, request, jsonify
-import torch
+import os
+import requests
 
-# Use a pipeline as a high-level helper
-from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 
-# Set device (use GPU if available)
-device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Using device: {device}")
+HF_TOKEN = os.getenv("HF_TOKEN")
+API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
+HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
-tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
-model = AutoModelForSeq2SeqLM.from_pretrained("facebook/bart-large-cnn")
-
-# Load BART-large model for summarization
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 def summarize_text(text_to_summarize):
     print("Processing summarization...")
@@ -20,23 +14,19 @@ def summarize_text(text_to_summarize):
         if not text_to_summarize:
             return jsonify({"status": "error", "message":"No text provided for summarization"})
         print("Performing summarization...")
+        
+        if len(text_to_summarize.split()) > 1000:
+            text_to_summarize = " ".join(text_to_summarize.split()[:1000])
 
-        # 🔥 Tokenize text and check length
-        tokens = tokenizer.encode(text_to_summarize, return_tensors="pt")
-        token_count = tokens.shape[1]
-          # 🚨 If input is too long, truncate it
-        if token_count > 1000:
-            print(f"⚠️ WARNING: Text is too long ({token_count} tokens). Truncating to 1000 tokens.")
-            tokens = tokens[:, :1000]  # Keep only the first 1024 tokens
-            text_to_summarize = tokenizer.decode(tokens[0], skip_special_tokens=True)
-
+        response = requests.post(API_URL, headers=HEADERS, json={"inputs": text_to_summarize})
+        result = response.json()
 
         # Perform summarization
-        summary = summarizer(text_to_summarize, min_length=200, max_length=300, do_sample=False)
-        if not summary:
-            return jsonify({"status": "error", "message": "Summarization failed"}), 500
+        if isinstance(result, list) and "summary_text" in result[0]:
+            return jsonify({"status": "success", "summary": result[0]["summary_text"]})
+        else:
+            return jsonify({"status": "error", "message": "Failed to summarize", "raw": result}), 500
 
-        return jsonify({"status": "success", "summary": summary[0]['summary_text']})
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
