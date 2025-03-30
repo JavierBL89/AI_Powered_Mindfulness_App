@@ -1,0 +1,212 @@
+/* CSS Variables */
+:root {
+  --primary-bg: rgb(246, 252, 244);
+  --secondary-bg: rgb(37, 50, 42);
+  --highlight-bg: rgb(203, 188, 109);
+  --primary-color: #444941;
+  --secondary-color: rgb(255, 179, 68);
+  --accent-color: rgb(246, 200, 133);
+  --link-color: rgb(56, 154, 195);
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --base-padding: 3%;
+  --border-radius: 10px;
+}
+
+/* General Styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+}
+
+/* Reviews Container */
+.review-container {
+  text-align: center;
+  margin: 50px auto;
+  background-color: var(--highlight-bg);
+  height: 120px;
+  padding: var(--base-padding);
+  border-radius: var(--border-radius);
+  width: 40%;
+}
+
+.review-container a {
+  margin: 0 20px;
+}
+
+/* Footer */
+#footer {
+  background-color: var(--secondary-bg);
+  padding-top: 5%;
+}
+
+.footer-brand {
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: white;
+}
+
+.footer-items-container {
+  margin: 0 80px;
+  line-height: 45px;
+}
+
+.footer-items-container p {
+  padding-bottom: 14px;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: var(--secondary-color);
+}
+
+.copy-right {
+  text-align: center;
+  color: white;
+  padding: 5%;
+}
+
+/* Modal Footer 
+#modal-footer-wraper {
+  display: none;
+}
+*****/
+
+/* Page Content */
+.meditation-meditation-main-wraper {
+  padding: var(--base-padding) 15%;
+  line-height: 31px;
+}
+
+.meditation-main-wraper h1, h2, h3, h5 {
+  background-color: rgb(255, 250, 200);
+}
+
+.meditation-main-wraper h3{
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.meditation-main-wraper h2{
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.iniciate-link {
+  background-color: rgb(220, 231, 153);
+  color: rgb(152, 183, 255);
+  text-align: center;
+  width: 75%;
+  margin: 7% auto;
+}
+
+.meditation-main-wraper ul {
+  list-style: none;
+}
+
+.meditation-main-wraper ul li::before {
+  content: "\2022";
+  color: rgb(179, 0, 203);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.meditation-main-wraper ul li {
+  color: rgb(108, 106, 45);
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.meditation-video-container, #powerful-meditation-container {
+  text-align: center;
+}
+
+#video-1, #video-2 {
+  width: 560px;
+  height: 315px;
+  border: none;
+}
+
+.benefits-container ul li {
+  text-align: left;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+
+  .review-container {
+    width: 60%;
+    font-size: 19px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  #video-1, #video-2 {
+    width: 450px;
+    height: 290px;
+  }
+
+  .benefits-container ul li {
+    color: var(--primary-color);
+  }
+}
+
+@media (max-width: 575px) {
+
+  .meditation-main-wraper {
+    padding: 3% 7%;
+    text-align: center;
+  }
+
+  .review-container {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  #video-1, #video-2 {
+    width: 300px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .iniciate-link {
+    width: 90%;
+  }
+}

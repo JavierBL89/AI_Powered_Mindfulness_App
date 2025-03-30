@@ -1,0 +1,35 @@
+{% block ai_tool_content %}
+
+<div id="chatbot-container">
+
+    <div id="chatbot-suggestions-container">     
+        <div id="suggestion-1" class="suggestion-button">
+            What is mindfulness?
+        </div>
+        <div id="suggestion-2" class="suggestion-button">
+            How to get started
+        </div>
+    </div>
+
+    <div id="chatbot-body">
+        <!-- Chat content dynamically loaded here -->
+    </div>
+    
+    <div id="chatbot-window" class="hidden">   
+        <button id="chatbot-toggle">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+
+        <input type="text" id="chatbot-input" placeholder="Ask me something..." autocomplete="off">
+        
+        <div id="chatbot-header">
+            <button id="chatbot-send"> <i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+    
+</div>
+{% block extra_js %}
+    <script type="module" src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+{% endblock %}
+
+{% endblock %}

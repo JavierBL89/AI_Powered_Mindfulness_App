@@ -1,0 +1,42 @@
+
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aiFeatures.css') }}">
+{% endblock %}
+
+{% block aiFeaturesBaseTemplate %}
+
+  <div id="ai-tools-container">
+    <!-- Main AI Tools Button -->
+    <button id="ai-tools-main-btn">
+      <i class="fas fa-robot"></i> <span>AI Tools</span>
+    </button>
+
+    <!-- Expanded Tool Options -->
+    <div id="ai-tools-options" class="hidden">
+      <button class="ai-tool-btn" data-tool="chatbot">
+        <i class="fas fa-comments"></i> <span>Chatbot</span>
+      </button>
+      <button class="ai-tool-btn" data-tool="summarize_page">
+        <i class="fas fa-file-alt"></i> <span>Summarize Page</span>
+      </button>
+      <!-- <button class="ai-tool-btn" data-tool="recommendations">
+        <i class="fas fa-thumbs-up"></i> <span>Recommendations</span>
+      </button> -->
+      <button class="ai-tool-btn" data-tool="mood_tracker">
+        <i class="fas fa-chart-line"></i> <span>Mood Tracker</span>
+      </button>
+      <!-- <button class="ai-tool-btn" data-tool="voice">
+        <i class="fas fa-microphone"></i> <span>Voice Interaction</span>
+      </button> -->
+    </div>
+  </div>
+
+
+  <!-- Dynamic AI Tool Interaction Area -->
+  <div id="ai-interaction-container" class="ai-interaction-container-hidden">
+    {% block ai_tool_content %}{% endblock %}
+  </div>
+
+{% endblock %}

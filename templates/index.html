@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section id="main-cover">
+  <div class="img-cover-container">
+    <div class="cover-content content-box">
+      <h1 class="heading-cover mind">TRAIN YOUR <strong>MIND</strong></h1>
+      <h1 class="heading-cover body">TRAIN YOUR <strong>BODY</strong></h1>
+      <h1 class="heading-cover beyond">GO BEYOND!</h1>
+      <div id="cover-call-to-action-box"></div>
+      <p class="cover-foot-text"></p>
+    </div>
+  </div>
+</section>
+
+<section id="hp-benefits-section">
+  <div class="benefits-container">
+    <ul>
+      <li class="line-2">Improve our emotional state</li>
+      <li class="line-3">Lead us to a more satisfied life</li>
+      <li class="line-4">Bring us back to the present moment</li>
+      <li class="line-5">We take control of our emotions here and now</li>
+      <li class="line-1">Through mindful living practices, we can find more happiness, joy, <br> and meaning in our lives.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="ai-features" class="position-relative text-white py-5">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="video-bg">
+      <source src="../static/videos/Full_bg_video.mov" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Content Overlay -->
+  <div class="container position-relative">
+      <h2 class="text-center font-weight-bold mb-4">AI-Powered Features</h2>
+      <div class="row">
+          <!-- Feature 1 -->
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-smile fa-3x"></i>
+            <h3 class="mt-3">Mood Tracker</h3>
+            <p>Log your mood and get AI-generated insights to improve well-being.</p>
+            <!-- <button class="btn btn-outline-light" onclick="logMood()">Log Mood</button> -->
+        </div>
+          <!-- Feature 2 -->
+          <div class="col-md-4 text-center mb-4">
+              <i class="fas fa-robot fa-3x"></i>
+              <h3 class="mt-3">AI Chatbot</h3>
+              <p>Chat with our AI assistant for guidance and resources.</p>
+              <p>Our AI assistant can provide you with custom mindfulness and yoga routines tailored to your needs.</p>
+
+              <!-- <button class="btn btn-outline-light" onclick="openChatbot()">Chat Now</button> -->
+          </div>
+                     <!-- Feature 3 -->
+                     <div class="col-md-4 text-center mb-4">
+                      <i class="fas fa-file-alt fa-3x"></i>
+                      <h3 class="mt-3">Content Summarizer</h3>
+                      <p>Summarize theage key content for a shorter read.</p>
+                      <!-- <button class="btn btn-outline-light" onclick="openChatbot()">Chat Now</button> -->
+                  </div>
+
+
+        <div class="button-container">
+          <a class="btn btn-primary-lg" href="/mindfulness">Start your New YOU!</a>
+        </div>
+      </div>
+  
+  </div>
+</section>
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12n65VZLLtDkPDSndEvkRlEZc+RxYIHfvEIH1zYjKu6q6A6M" crossorigin="anonymous"></script>
+
+  <script>
+    function showRecommendations() {
+        alert("AI-powered recommendations coming soon!");
+    }
+    function logMood() {
+        alert("Mood logging feature is under development!");
+    }
+    function openChatbot() {
+        alert("AI chatbot will be available soon!");
+    }
+</script>
+  {% endblock %}

@@ -1,0 +1,22 @@
+<!-- MOBILE NAVIGATION BAR  -->
+
+{% block fixedMobileTopNavBar %}
+<div class="navbar sticky-top navigation-mobile-container" id="navigation-mobile-container">
+    <div class="navigation-items">
+        <div class="separator-navigation-container" style="margin-right: 12px;">
+            <a class="navigation-link {% if request.path.startswith('/mindfulness') and request.path != '/mindfulness_meditation' %}active{% endif %}" href="/mindfulness">MINDFULNESS</a>
+
+            <a class="navigation-link {% if '/yoga' in request.path %}active{% endif %}" href="/yoga">YOGA</a>
+        </div>
+
+        <div class="separator-navigation-container">
+            <a class="navigation-link {% if request.path.startswith('/mindfulness_meditation') and request.path != '/mindfulness' %}active{% endif %}" href="/mindfulness_meditation">MINDFULNESS MEDITATION</a>
+            <a class="navigation-link {% if '/meditation' in request.path %}active{% endif %}" href="/meditation">MEDITATION</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

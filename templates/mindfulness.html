@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block title %}Mindfulness{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mindfulness.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<!-- TOP NAVIGATION BAR  -->
+{% include 'topNavBar.html' %}
+<!-- MOBILE NAVIGATION BAR  -->
+{% include 'fixedMobileTopNavBar.html' %}
+
+<div class="top-page-navigation" style="padding-top:3%; padding-bottom: 3%;">
+  <div class="top-page-items-navigation">
+    <a href="#practice-mindfulness-section">HOW TO PRACTICE IT</a>
+    <a href="#exercises" class="active">MEDITATION EXERCISES</a>
+    <a href="#benefits">BENEFITS</a>
+  </div>
+</div>
+
+<div class="mindfulness-main-wraper">
+
+  <!-- AI TOOLS  -->
+  {% include 'aiFeaturesBaseTemplate.html' %}
+
+  <section id="introduction-mindfulness">
+
+    <div class="intro-mindfulness-container">
+
+      <h1>What is Mindfullness?</h1>
+      <hr style="width: 100%;" />
+      <img src="../static/images/Minsdulness2.jpg" alt="mindfulness-collage-picture">
+      <br>
+      <br>
+      <em class="firstEmphasis">"Mindfulness is about understanding yourself and being "in the moment", starting from
+        simple things as having a coffe in the morning and actually appreciate that coffee in that precise moment."</em>
+      <br>
+      <a href="https://projecthappiness.mykajabi.com/blog/8-mindfulness-habits-you-can-practice-everyday?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNNtC7BXoAmbP0-SoWjoNbXJ7YSY5kmR0IfNkZYSgOcnkQ2WDk7DKkaAoSkEALw_wcB"
+        target="_blank">(See 8 Mindfulness habits)</a>
+      <br /><br />
+      <p>
+        <strong>Mindfulness</strong> is the basic human ability to be fully present, aware of where we are and what
+        we’re doing, and not overly reactive or overwhelmed by what’s going on around us.
+
+        While mindfulness is something we all naturally possess, it’s more readily available to us when we practice on a
+        daily basis.
+
+        Whenever you bring awareness to what you’re directly experiencing via your senses, or to your state of mind via
+        your thoughts and emotions, you’re being mindful. Through being mindful, we learn that small things can have a
+        big effect.
+        Becoming aware of our bodies, our emotional life, our communication with others, helps us to live a life that
+        flows into a rich tapestry of awareness, imbued with beauty and appreciation.
+      </p>
+      <p>
+        <em>"Mindfulness is available to us in every moment, whether through meditations and body scans, or mindful
+          moment practices like taking time to pause and breathe when the phone rings instead of rushing to answer it."
+        </em>
+      </p>
+    </div>
+
+    <div class="mindfulness-video">
+      <iframe id="video-1" src="https://www.youtube.com/embed/ULJSacYFzzQ" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="snapchat-mindfulness">
+        <h6>
+          ...the <strong>awareness</strong> that arises through paying attention on purpose <strong>in the present
+            moment</strong> non-judmentally...
+        </h6>
+        <p>
+          <em>Jon Kabat</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="practice-mindfulness-section">
+    <div class="practise-mindfulness-container">
+      <div class="content-practise-mindfulness">
+        <h2>How do i practice Mindfulness?</h2>
+        <p>
+          Simple mindfulness exercises can be practiced anywhere and anytime, when we’re on the bus, when we’re waiting
+          in the queue at the shop, while we’re eating. Research indicates that engaging your senses outdoors is
+          especially
+          beneficial.<br />
+
+          There are many simple ways to practice mindfulness. Some examples include:
+        </p>
+        <ul>
+
+          <li>
+            <strong>Pay attention</strong>. It's hard to slow down and notice things in a busy world. Try to take the
+            time to experience your environment with all of your senses — touch, sound, sight, smell and taste. For
+            example, when you eat a
+            favorite food, take the time to smell, taste and truly enjoy it.
+          </li>
+          <li>
+            <strong>Live in the moment</strong>. Try to intentionally bring an open, accepting and discerning attention
+            to everything you do. Find joy in simple pleasures
+          </li>
+          <li>
+            <strong>Acept yourself</strong>. Treat yourself the way you would treat a good friend.
+          </li>
+          <li>
+            <strong>Focus on breathing</strong>. When you have negative thoughts, try to sit down, take a deep breath
+            and close your eyes. Focus on your breath as it moves in and out of your body. Sitting and breathing for
+            even just a minute can
+            help.
+          </li>
+        </ul>
+        <div id="exercises"></div>
+      </div>
+
+      <div class="content-practise-mindfulness">
+        <p>
+          You can also try more <strong>structured mindfulness</strong> exercises that involve <a href=""
+            target="_blank">meditation</a>, such as:
+        </p>
+        <ul>
+
+          <li>
+            <strong>Body scan meditation</strong>. Lie on your back with your legs extended and arms at your sides,
+            palms facing up. Focus your attention slowly and deliberately on each part of your body, in order, from toe
+            to head or head to toe. Be
+            aware of any sensations, emotions or thoughts associated with each part of your body.
+            <br /><br />
+            <i>- 15min practice</i>
+            <br />
+            <a href="https://youtu.be/CyKhfUdOEgs">Mindfulness Meditation Scan</a>
+
+          </li>
+          <li>
+            <strong>Sitting meditation</strong>. Sit comfortably with your back straight, feet flat on the floor and
+            hands in your lap. Breathing through your nose, focus on your breath moving in and out of your body. If
+            physical sensations or
+            thoughts interrupt your meditation, note the experience and then return your focus to your breath.
+            <br /><br />
+            <i>- 10min practice</i>
+            <br>
+            <a href="https://youtu.be/ZToicYcHIOU">Daily Mindfulness Meditation</a>
+            <br />
+          </li>
+          <li>
+            <strong>Walking meditation</strong>. Find a quiet place 10 to 20 feet in length, and begin to walk slowly.
+            Focus on the experience of walking, being aware of the sensations of standing and the subtle movements that
+            keep your balance. When
+            you reach the end of your path, turn and continue walking, maintaining awareness of your sensations.
+            <br /><br />
+            <i>- 15min practice</i>
+            <br>
+            <a href="https://youtu.be/HRuqe26F8SU">Walking Mindfulness Meditation</a>
+            <br />
+          </li>
+        </ul>
+      </div>
+      <div class="animation-container">
+        <h5>...Get a better grasp of what mindfulness is about!</h5>
+        <br />
+        <p>5 min long video</p>
+        <iframe id="video-2" src="https://www.youtube.com/embed/7-1Y6IbAxdM" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <div id="benefits"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mindfulness-benefits-container">
+      <h2>Benefits of mindfulness</h2>
+      <ul style="padding-left: 18px">
+
+        <li>
+          <strong>Mindfulness improves well-being.</strong> Increasing your capacity for mindfulness supports many
+          attitudes that contribute to a satisfied life. <br />Being mindful makes it easier to savor the pleasures in
+          life as they occur, helps
+          you become fully engaged in activities, and creates a greater capacity to deal with adverse events.<br /> By
+          focusing on the here and now, many people who practice mindfulness find that they are less likely to get
+          caught up in worries about
+          the future or regrets over the past, are less preoccupied with concerns about success and self-esteem, and are
+          better able to form deep connections with others.
+        </li>
+        <li>
+          <strong>Mindfulness improves physical health.</strong> If greater well-being isn’t enough of an incentive,
+          scientists have discovered that mindfulness techniques help improve physical health in a number of ways.
+          <br /><em>Mindfulness</em>
+          can: help relieve stress, treat heart disease, lower blood pressure, reduce chronic pain, , improve sleep, and
+          alleviate gastrointestinal difficulties.
+        </li>
+        <li>
+          <strong>Mindfulness improves mental health.</strong> In recent years, psychotherapists have turned to <a
+            href="mindfulness&meditation.html"><em>mindfulness meditation</em></a> as an important element in the
+          treatment of a number of
+          problems, including: depression, substance abuse, eating disorders, couples’ conflicts, anxiety disorders, and
+          obsessive-compulsive disorder.
+        </li>
+      </ul>
+    </div>
+    <br>
+    <div id="video-link">
+      <h6><a href="https://youtu.be/PqfzbspDwrM" target="_blank">WATCH ANIMATION VIDEO!</a></h6>
+      <i> (2min long)</i>
+    </div>
+
+
+  </section>
+
+</div>
+</div>
+{% include 'reviewComponent.html' %}
+
+{% endblock %}

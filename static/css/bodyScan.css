@@ -1,0 +1,189 @@
+/* CSS Variables */
+:root {
+  --primary-bg: rgb(246, 252, 244);
+  --secondary-bg: rgb(37, 50, 42);
+  --highlight-bg: rgb(203, 188, 109);
+  --primary-color: #444941;
+  --secondary-color: rgb(255, 179, 68);
+  --accent-color: rgb(246, 200, 133);
+  --button-bg: rgb(220, 231, 153);
+  --link-color: rgb(56, 154, 195);
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --base-padding: 3%;
+  --border-radius: 10px;
+}
+
+/* General Styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+}
+
+/* Sections with consistent padding */
+.navbar, .call-to-action-container, .benefits-container, footer {
+  padding: var(--base-padding) 6%;
+}
+
+/***** REVIEWS CONTAINER *****/
+.review-container {
+  text-align: center;
+  margin: 50px auto;
+  background-color: var(--highlight-bg);
+  height: 120px;
+  padding: var(--base-padding);
+  border-radius: var(--border-radius);
+  width: 40%;
+}
+
+.review-container a {
+  margin: 0 20px;
+}
+
+/***** FOOTER SECTION *****/
+#footer {
+  background-color: var(--secondary-bg);
+  padding-top: 5%;
+}
+
+.footer-brand {
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: white;
+}
+
+.footer-items-container {
+  margin: 0 80px;
+  line-height: 45px;
+}
+
+.footer-items-container p {
+  padding-bottom: 14px;
+}
+
+#footer a {
+  display: grid;
+  color: white;
+}
+
+#footer a:hover {
+  color: var(--secondary-color);
+}
+
+.copy-right {
+  text-align: center;
+  color: white;
+  padding: 5%;
+  font-size: 14px;
+}
+
+/***** MODAL FOOTER SECTION *****/
+#modal-footer-wraper {
+  display: none;
+}
+
+/***** PAGE CONTENT *****/
+.main-wraper {
+  padding: var(--base-padding) 15%;
+  line-height: 31px;
+  text-align: center;
+}
+
+.main-wraper h1, h2, h3, h4, h5 {
+  background-color: rgb(255, 250, 200);
+}
+
+.iniciate-link {
+  background-color: var(--button-bg);
+  color: rgb(152, 183, 255);
+}
+
+.main-wraper ul {
+  list-style: none;
+}
+
+.main-wraper ul li::before {
+  content: "\2022";
+  color: rgb(179, 0, 203);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.main-wraper ul li {
+  color: rgb(108, 106, 45);
+}
+
+#video-1, #video-2, #video-3 {
+  width: 560px;
+  height: 315px;
+  border: none;
+}
+
+.meditation-video-container {
+  margin-bottom: 8%;
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 990px) {
+  
+  .review-container {
+    width: 60%;
+    font-size: 19px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  #video-1, #video-2, #video-3 {
+    width: 450px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 575px) {
+  .main-wraper {
+    padding: var(--base-padding);
+    text-align: center;
+  }
+
+  .review-container {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  #video-1, #video-2, #video-3 {
+    width: 300px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}

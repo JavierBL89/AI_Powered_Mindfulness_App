@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+{% block title %}Yoga{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/yoga.css') }}">
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- TOP NAVIGATION BAR  -->
+{% include 'topNavBar.html' %}
+<!-- MOBILE NAVIGATION BAR  -->
+{% include 'fixedMobileTopNavBar.html' %}
+
+
+<div class="top-page-navigation">
+  <div class="top-page-items-navigation">
+    <a href="#types">TYPES OF YOGA</a>
+    <a href="#benefits" class="active">BENEFITS</a>
+    <a href="#get-started">GETTING STARTED</a>
+  </div>
+</div>
+
+
+<div class="yoga-main-wraper">
+
+    <!-- AI TOOLS  -->
+    {% include 'aiFeaturesBaseTemplate.html' %}
+
+  <h1>What "<em>yoga</em>" means?</h1>
+  <hr />
+
+  <img src="../static/images/0411_InbedYoga_Blog-730x485.jpg" alt="woman-yoga-asana">
+  <br />
+  <br>
+  <p><strong>Yoga</strong> is a practice to conect mind, breathing, and body.<br />
+    This technique uses postures, breathing exercises and meditation to improve well-being and health</p>
+  <p>The literal translation of the word “yoga” from Sanskrit (which is recognized as the original language of yoga) is
+    “union”. </p>
+  <p>Yoga began in India and has been around for about 5,000 years.</p>
+  <p>It is yoga as we know it today, “<i>We define it as bringing together the mind and the body by use of the
+      breath.</i>”</p>
+
+  <h2 id="benefits">Why should we all practice Yoga?</h2>
+  <p>Whether for fitness, mental space, or simply an excuse to buy more Lycra – yoga has found its way into our lives.
+    “Yoga is the first and most successful product of globalisation,” says Stefanie Syman, the Brooklyn-based author of
+    The Subtle Body: The Story of Yoga in America. </p>
+  <p>
+    In 2018, yoga was reported to be the fourth fastest growing industry in the US
+    <br />
+    Globally, more than 300 million people now practise yoga.
+
+  </p>
+
+  It is thanks to all of the <b>benefits</b> that yoga practice provides:
+
+  <h4>Physical Benefits</h4>
+  <ul>
+    <li>
+      increased flexibility
+    </li>
+    <li>
+      increased muscle strength and tone
+    </li>
+    <li>
+      improved respiration, energy and vitality
+    </li>
+    <li>
+      maintaining a balanced metabolism
+    </li>
+    <li>
+      weight reduction
+    </li>
+    <li>
+      cardio and circulatory health
+    </li>
+    <li>
+      improved athletic performance
+    </li>
+    <li>
+      protection from injury
+    </li>
+  </ul>
+
+  <h4>Mental Benefits</h4>
+  <ul>
+    <li>
+      reduces stress
+    </li>
+    <li>
+      relieves anxiety
+    </li>
+    <li>
+      improved mood and fatigue levels
+    </li>
+    <li>
+      reduce the symptoms and signs of depression
+    </li>
+    <li>
+      promotes sleep quality and helps to fall sleep faster
+    </li>
+    <li>
+      introduces positivity.
+    </li>
+    <li>
+      increases happiness
+    </li>
+  </ul>
+
+  <h4>Improve Conditions</h4>
+  <ul>
+    <li>
+      Poor blood circulation
+    </li>
+    <li>
+      High blood pressure
+    </li>
+    <li>
+      Arthritis
+    </li>
+    <li>
+      Osteoporosis
+    </li>
+    <li>
+      Limited mobility
+    </li>
+    <li>
+      Lower back pain
+    </li>
+    <li>
+      Trouble breathing
+    </li>
+    <li>
+      Headaches
+    </li>
+    <li>
+      Tension or stress
+    </li>
+    <li>
+      Depression
+    </li>
+  </ul>
+
+  <div class="can-help-container">
+    <h4 style="background-color: rgb(255, 250, 200);">Yoga can help you...</h4>
+    <ul>
+      <li>
+        <b>Increase your concentration</b>. <span class="text-li">A main part of yoga is rhythmic, focused breathing.
+          This can help you focus.</span>
+      </li>
+      <li>
+        <b>Understand the mind and body connection</b>.<span class="text-li"> Yoga requires you to focus all your energy
+          on each movement or pose exactly. This can help you feel the mind and body work together.</span>
+      </li>
+      <li>
+        <b>Gain strength and stamina</b>. <span class="text-li">More vigorous styles of yoga promote strength and
+          stamina.</span>
+      </li>
+      <li>
+        <b>Improve balance and stability</b>.<span class="text-li"> Balancing poses require you to use your core
+          muscles. This can help you improve your overall stability.</span>
+      </li>
+      <li>
+        <b>Improve posture</b>. <span class="text-li">Yoga poses strengthen and open tight areas of the body like the
+          shoulders and muscles of the upper back. This can help you keep good posture.</span>
+      </li>
+      <li>
+        <b>Develop body awareness</b>. <span class="text-li">Yoga requires you to contract or relax specific muscles as
+          you stretch into each pose. This can help you become more aware of your body’s strengths and
+          weaknesses.</span>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+  <div class="video-container" style="text-align: center;">
+    <h3>Science Behind Yoga!</h3>
+    <br>
+    <p><i>25min long</i></p>
+    <iframe id="video-1" src="https://www.youtube.com/embed/CIbR7odQklk" title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <div id="types"></div>
+  </div>
+  <br>
+  <br><br />
+
+  <section>
+    <h3>Types of Yoga</h3>
+    <p>There are many different <strong>types of yoga</strong> with different goals, choose th one suits you better.</p>
+    <h4>ANUSARA</h4>
+    <p>Developed by American yogi John Friend in 1997, Anusara yoga is a relative newcomer to the yoga world. Based on
+      the belief that we’re all filled with an intrinsic goodness, <em>Anusara</em> seeks to use the physical practice
+      of yoga to help students open their hearts, experience grace, and let their inner goodness shine through. Classes,
+      which are specifically sequenced by the teacher to explore one of Friend's Universal Principles of Alignment, are
+      rigorous for the body and the mind.</p>
+    <h4>ASHTANGA</h4>
+    <p>Ashtanga is based on ancient yoga teachings, but it was popularized and brought to the West by K. Pattabhi Jois
+      (pronounced "pah-tah-bee joyce") in the 1970s. It's a rigorous style of yoga that follows a specific sequence of
+      postures and is similar to vinyasa yoga, as each style links every movement to a breath. The difference is that
+      <em>Ashtanga</em> always performs the exact same poses in the exact same order. This is a sweaty, physically
+      demanding practice, so make sure to bring your trusty yoga mat towel.</p>
+    <h4>KUNDALINI YOGA</h4>
+    <p>This is a more spiritual approach and encourages meditation. It is not physically demanding, due to the postures
+      being simple as it is more focused on clearing the mind and finding inner peace.
+      <br />This type of yoga is ideal for those who seek to escape from stress and reconnect with their inner self. It
+      strengthens the nervous system and purifies the blood.
+    </p>
+    <h4>BIKRAM</h4>
+    <p>About 30 years ago, Bikram Choudhury developed this school of yoga where classes are held in artificially heated
+      rooms. In a Bikram class, you will sweat like never before as you work your way through a series of 26 poses. Like
+      Ashtanga, a <em>Bikram</em>Bikram class always follows the same sequence, although a Bikram sequence is different
+      from an ashtanga sequence. Bikram is somewhat controversial, as Choudhury trademarked his sequence and has sued
+      studios who call themselves Bikram, but don't teach the poses exactly the way he says they should. It’s also
+      wildly popular, making it one of the easiest classes to find. Due to the heated conditions of the studio, don't
+      forget to bring a water bottle!</p>
+    <h4>HATHA</h4>
+    <p>Hatha yoga is a generic term that refers to any type of yoga that teaches physical postures. Nearly every type of
+      yoga class taught in the West is Hatha yoga. When a class is marketed as Hatha, it generally means that you will
+      get a gentle introduction to the most basic yoga postures. You probably won't work up a sweat in a <em>hatha</em>
+      yoga class, but you should end up leaving class feeling longer, looser, and more relaxed.</p>
+    <h4>HOT YOGA</h4>
+    <p>Largely the same thing as Bikram. Generally, the only difference between Bikram and hot yoga is that the hot yoga
+      studio deviates from Bikram's sequence in some small way, and so they must call themselves by another name. The
+      room will be heated and you will sweat buckets, so check out our mats and accessories specifically designed for
+      <em>hot yoga</em> classes. </p>
+    <h4> IYENGAR</h4>
+    <p>Iyengar yoga was developed and popularized by B.K.S. Iyengar (pronounced "eye-yen-gar"). Iyengar is a very
+      meticulous style of yoga, with utmost attention paid to finding the proper alignment in a pose. In order to help
+      each student find the proper alignment, an Iyengar studio will stock a wide array of yoga props — blocks,
+      blankets, straps, chairs and bolsters are all common. There isn't a lot of jumping around in Iyengar classes, so
+      you won't get your heart rate up, but you'll be amazed to discover how physically and mentally challenging it is
+      to stay put. Iyengar teachers must undergo a comprehensive training — if you have an injury or chronic condition,
+      <em>Iyengar</em> is probably your best choice to ensure you get the knowledgeable instruction you need. For a
+      speedier recovery from an injury or to relieve sore, tight muscles, check out our line of recover products. </p>
+    <h4>RESTORATIVE</h4>
+    <p>Restorative yoga is a delicious way to relax and soothe frayed nerves. Also described as yin yoga,
+      <em>restorative</em> classes use bolsters, blankets, and blocks to prop students into passive poses so the body
+      can experience the benefits of a pose without having to exert any effort. A good restorative class is more
+      rejuvenating than a nap. Studios and gyms often offer them on Friday nights, when just about everyone could use
+      some profound rest.</p>
+    <h4>VINYASA</h4>
+    <p> Vinyasa classes are known for their fluid, movement-intensive practices. <em>Vinyasa</em> teachers sequence
+      their classes to smoothly transition from pose to pose, with the intention of linking breath to movement, and
+      often play music to keep things lively. The intensity of the practice is similar to Ashtanga, but no two vinyasa
+      classes are the same. If you hate routine and love to test your physical limits, vinyasa may be just your ticket.
+    </p>
+  </section>
+
+  <section id="get-started">
+    <h2>HATHA YOGA</h2>
+    <p>Hatha yoga is the <b>most popular</b> and the one offered in most gyms. It covers all the traditional aspects of
+      yoga such as body awareness, breathing and meditation.
+      <br>
+      This type of yoga is ideal for people starting for the first time, since the general postures are basic, and the
+      class progresses in a slow progressive manner. The asanas(<i>poses</i>) are simple with the aim of teaching you
+      how to breathe, relax and meditate during the classes.
+    </p>
+    <div class="video-container" style="text-align: center;">
+      <h4 style="background-color:rgb(255, 250, 200);">All levels 30min Hatha Yoga class</h4>
+      <br>
+      <p>4million views</p>
+      <iframe id="video-2" src="https://www.youtube.com/embed/g13nVd7OLYs" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    </div>
+  </section>
+
+  {% include 'reviewComponent.html' %}
+  </div>
+
+  {% endblock %}

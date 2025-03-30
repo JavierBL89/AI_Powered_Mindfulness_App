@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+
+{% block title %}Mindfulness & Meditation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mindfulness&meditation.css') }}">
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- TOP NAVIGATION BAR  -->
+{% include 'topNavBar.html' %}
+<!-- MOBILE NAVIGATION BAR  -->
+{% include 'fixedMobileTopNavBar.html' %}
+
+<div class="top-page-navigation" style="padding-top:3%; padding-bottom: 3%;">
+  <div class="top-page-items-navigation">
+    <a href="#practice">HOW TO PRACTICE IT</a>
+    <a href="#techniques" class="active">TECHNIQUES</a>
+    <a href="#benefits">BENEFITS</a>
+  </div>
+</div>
+
+
+<div class="mindfulness_meditation-main-wraper">
+
+    <!-- AI TOOLS  -->
+    {% include 'aiFeaturesBaseTemplate.html' %}
+
+  <section id="intro-section">
+
+    <div class="intro-container">
+
+      <h1>What is Mindfullness Meditation?</h1>
+      <hr />
+
+      <img src="../static/images/tile-stress-mindfulness-meditation_tcm7-264379.jpg" alt="woman-sited-meditating">
+      <br>
+      <br>
+      <p>
+        <strong>Mindfulness meditation</strong> is a mental training practice that teaches you to slow down racing
+        thoughts, let go of negativity, and calm both your mind and body. It combines meditation with the practice of
+        mindfulness, which can be defined as a mental state that involves being fully focused on "the now" so you can
+        acknowledge and accept your thoughts, feelings, and sensations without judgment.
+      </p>
+      <p>
+        <em class="firstEmphasis">"...to meditate with mindful breathing is to bring back your body and mind to the
+          present moment."</em>
+      </p>
+
+      <div class="video-intro-mindAndMeditation">
+        <h3>...The Science behind Mindfulness Meditation!</h3>
+
+        <p>5min long video</p>
+        <iframe id="video-1" src="https://www.youtube.com/embed/VTA0j8FfCvs" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+  </section>
+  <div id="practice"></div>
+  <section>
+
+    <div class="practise-mindfulness-meditation-container" id="practise-mindfulness&Meditation">
+      <div class="practise-mindfulness-meditation-content">
+        <h2>How to practice Mindfulness Meditation?</h2>
+        <p>
+          Techniques can vary, but in general, <em>mindfulness meditation</em> involves deep breathing and awareness of
+          body and mind. Practicing mindfulness meditation doesn't require props or preparation (no need for candles,
+          essential oils, or mantras, unless you enjoy them). To get started, all you need is a comfortable place to
+          sit, three to five minutes of free time, and a judgment-free mindset.
+        </p>
+        <p>Find a good spot in your home, ideally where there isn’t too much clutter and you can find some quiet. Leave
+          the lights on or sit in natural light. You can even sit outside if you like, but choose a place with little
+          distraction.</p>
+        <h4>Positions:</h4>
+
+        <div class="positions-container">
+          <h5>Seated in a chair, or on a sofa</h5>
+
+          <img src="../static/images/person-meditating-on-the-sofa.jpg" alt="person-meditating-sofa">
+
+          <img src="../static/images/mqdefault.jpg" alt="person-meditating-chair">
+          <br /><br />
+          <p>Unless you’ve done a lot of yoga, or you’ve grown up practicing meditation in a cross-legged seated or
+            lotus position and you’re really comfortable with it, we recommend sitting in an upright chair with your
+            legs uncrossed, feet on the floor, and your arms and hands resting either on the legs or in the lap.</p>
+
+        </div>
+
+
+        <div class="positions-container">
+          <h5>Laying down<em style="font-weight: normal; font-size: 21px;"> (savasana position)</em></h5>
+          <div class="">
+            <img src="../static/images/Female_Yoga_Mat_Laying_Down_1200x628-facebook-1200x628.jpg"
+              alt="woman-meditating-position-savasana">
+
+            <img style="height: 210px"
+              src="../static/images/overhead-view-of-woman-lying-down-meditating.jpg"
+              alt="woman-meditating-position-savasana">
+          </div>
+          <br><br />
+          <p>Mind tends to be more alert and attentive when we’re seated and upright, most teachers agree that sitting
+            to meditate is best whenever possible. However, if you’re wondering whether you can meditate lying down, the
+            answer is yes.</p>
+          <p>The best way to meditate lying down is to lay a yoga mat or a towel on the floor and assume a so-called
+            corpse position or a <em>savasana.</em></p>
+          <ul class="options">
+            <li>Option 1</li>
+          </ul>
+          <p class="options-text">Lying down is also an option as a meditation position for beginners if it helps you
+            feel more comfortable while you’re learning a new skill.
+
+            To set yourself up, lie on your back with your legs about hip-width apart, toes relaxed out to the side,
+            arms extended alongside your body, palms turned up. (If you’re familiar with yoga, this is savasana, or
+            corpse pose, that comes at the end of class.)</p>
+          <ul class="options">
+            <li>Option 2</li>
+          </ul>
+          <p class="options-text">Try placing a thin pillow under your head and bending your knees to 90 degrees so your
+            feet are flat on the floor, or put a pillow underneath your knees to elevate them. This will help to protect
+            your lower back and prevent any additional strain.</p>
+        </div>
+
+      </div>
+
+    </div>
+    <div id="techniques"></div>
+  </section>
+
+
+  <section id="Mindfulness&meditaion-techniques">
+    <div class="mindfulness-meditation-techniques-content">
+      <h2>Techniques</h2>
+      <p>
+        There is more than one way to practice mindfulness, but the goal of any <em>mindfulness technique</em> is to
+        achieve a state of alert, focused relaxation by deliberately paying attention to thoughts and sensations without
+        judgment. This allows the mind to refocus on the present moment.
+        <br />All mindfulness techniques are a form of meditation.
+      </p>
+
+      <ul style="padding-left: 0;">
+        <li>
+          <strong>Basic mindfulness meditation</strong> – Sit quietly and focus on your natural breathing or on a word
+          or “mantra” that you repeat silently. Allow thoughts to come and go without judgment and return to your focus
+          on breath or mantra.
+          <br />
+          <div class="exercises-links-container">
+            <i>- 3min exercise</i>
+            <br>
+            <a href="https://youtu.be/SEfs5TJZ6Nk" target="_blank">Mindful Breathing Meditation</a>
+            <br />
+            <br>
+            <i>- 5min exercise</i>
+            <br>
+            <a href="https://youtu.be/nmFUDkj1Aq0" target="_blank">Mindful Breathing Meditation</a>
+            <br />
+            <br>
+            <i>- 9min exercise</i>
+            <br>
+            <a href="https://youtu.be/vmgh_4YK6ew" target="_blank">Breathing Meditation for Beginners</a>
+          </div>
+
+        </li>
+
+        <li>
+          <strong>Body sensations</strong> – Notice subtle body sensations such as an itch or tingling without judgment
+          and let them pass. Notice each part of your body in succession from head to toe.
+          <br />
+          <div class="exercises-links-container">
+            <i>- 11min exercise</i>
+            <br>
+            <a href="https://youtu.be/tlsxl4t_TWY" target="_blank">Body Sensation Meditation</a>
+            <br />
+            <br>
+            <i>- 20min exercise</i>
+            <br>
+            <a href="https://youtu.be/4vuR4ZUmf8E" target="_blank">Mindfulness of Body Sensations Meditation</a>
+          </div>
+        </li>
+        <li>
+          <b>Sensory</b> – Notice sights, sounds, smells, tastes, and touches. Name them “sight,” “sound,” “smell,”
+          “taste,” or “touch” without judgment and let them go.
+          <br>
+          <div class="exercises-links-container">
+            <i>- 10min exercise</i>
+            <br>
+            <a href="https://youtu.be/3cevA6EjCbE" target="_blank">5 Senses Meditation</a>
+            <br />
+            <br>
+            <i>- 18min exercice</i>
+            <br>
+            <a href="https://youtu.be/8vlVX1e4cdU" target="_blank">Sensory Meditation</a>
+          </div>
+        </li>
+        <li>
+          <b>Emotions</b> – Allow emotions to be present without judgment. Practice a steady and relaxed naming of
+          emotions: “joy,” “anger,” “frustration.” Accept the presence of the emotions without judgment and let them go.
+          <br>
+          <div class="exercises-links-container">
+            <i>- 12min exercise</i>
+            <br>
+            <a href="https://youtu.be/eFlZ77oUwV4" target="_blank">Naming Your Emotions Meditation</a>
+          </div>
+        </li>
+        <li>
+          <b>Urge surfing</b> – Cope with cravings (for addictive substances or behaviors) and allow them to pass.
+          Notice how your body feels as the craving enters. Replace the wish for the craving to go away with the certain
+          knowledge that it will subside.
+          <br>
+          <div class="exercises-links-container">
+            <i>- 10min exercise</i>
+            <br>
+            <a href="https://youtu.be/dHzS_RBtnXE" target="_blank">Urge Surfing Meditation</a>
+            <br />
+            <br>
+            <i>- 20min exercise</i>
+            <br>
+            <a href="https://youtu.be/td4d_mV29Wo" target="_blank">Urge Surfing Meditation</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="benefits"></div>
+  </section>
+
+  <section id="mindfulness-benefits-wraper">
+    <div class="mindfulness-benefits-container">
+      <h2>Benefits of mindfulness</h2>
+
+      <ul style="padding-left: 0;">
+        <li>
+          <strong>Enhance your sleep</strong> Since improves relaxation and increase production of serotonin and
+          melatonin.
+        </li>
+        <li>
+          <strong>Lower your stress levels.</strong> and reduced levels of emotional exhaustion (burnout), psychological
+          distress, depression, anxiety, and occupational stress.
+        </li>
+        <li>
+          <strong>Mindfulness meditation.</strong> helps train your mind to focus on the present, making you less likely
+          to ruminate on anxious thoughts that can fuel depression.
+        </li>
+        <li>
+          <strong>Ease negative emotional states</strong>
+        </li>
+        <li><strong>Increase your attention</strong>If you find it difficult to pay attention for long periods of time,
+          meditation might enhance your focus.</li>
+        <li><strong>Mindfulness meditation is good for our hearts</strong>. In one study, people with pre-hypertension
+          were randomly assigned to augment their drug treatment with either a course in mindfulness meditation or a
+          program that taught progressive muscle relaxation. Those who learned mindfulness had significantly greater
+          reductions in their systolic and diastolic blood pressure than those who learned progressive muscle
+          relaxation, suggesting that mindfulness could help people at risk for heart disease by bringing blood pressure
+          down.</li>
+        <li><strong>Mindfulness meditation may decrease cognitive decline from aging or Alzheimer’s</strong>.</li>
+        <li><strong>Mindfulness meditation may reduce cell aging</strong>.</li>
+
+      </ul>
+    </div>
+    <br>
+    <h6><a href="https://youtu.be/PqfzbspDwrM" target="_blank">WATCH ANIMATION VIDEO!</a></h6>
+
+    <i> (2min long)</i>
+  </section>
+</div>
+{% include 'reviewComponent.html' %}
+
+{% endblock %}

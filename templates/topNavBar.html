@@ -1,0 +1,13 @@
+{% block topNavBar %}
+<div class="navbar sticky-top navigation-bar-container" id="navigation-bar-container">
+    <div class="navigation-items">
+        <a class="navigation-link {% if request.path.startswith('/mindfulness') and request.path != '/mindfulness_meditation' %}active{% endif %}" href="/mindfulness">Mindfulness</a>
+        <p>|</p>
+        <a class="navigation-link {% if request.path.startswith('/mindfulness_meditation') and request.path != '/mindfulness' %}active{% endif %}" href="/mindfulness_meditation">Mindfulness Meditation</a>
+        <p>|</p>
+        <a class="navigation-link {% if '/meditation' in request.path %}active{% endif %}" href="/meditation">Meditation</a>
+        <p>|</p>
+        <a class="navigation-link {% if '/yoga' in request.path %}active{% endif %}" href="/yoga">Yoga</a>
+    </div>
+</div>
+{% endblock %}

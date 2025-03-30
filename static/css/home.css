@@ -1,0 +1,676 @@
+body {
+  background-color: rgb(246, 252, 244);
+  color: #444941;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-wraper {
+  padding: 3% 30% 3% 6%;
+}
+
+.main-wraper a {
+  color: rgb(56, 154, 195);
+}
+
+h1, h2, h3, h4 ,h5{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/***** HEADER ******/
+.navbar{
+  /* padding: 0 20px; */
+}
+
+nav a {
+  color: #444941;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.nav-link {
+  margin-left: 80px;
+  position: relative;
+  top: 30px;
+  font-family: 'Poppins', sans-serif;
+  border: solid 1px rgb(246, 252, 244);
+}
+
+
+.nav-link:hover{
+  color:#444941;
+border-color: #444941;
+border-radius: 10px;
+}
+
+.navbar-brand{
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.navbar-brand:hover{
+  color:#444941;
+}
+
+/* COVER SECTION */
+.img-cover-container {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/benefits-yoga-fb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-name: cover;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes cover {
+  from{
+    transform: scale(1.4);
+  }
+
+  to{
+    transform: scale(1);
+  }
+}
+
+/*** HEADING BOX ***/
+.cover-content h1 {
+  color: white;
+  font-size: 2.4rem;
+  font-family: 'Scheherazade New', serif;
+}
+
+.cover-content {
+  background-color: black;
+  opacity: 0.5;
+  width: 45%;
+  height: 300px;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 20px;
+  clear: both;
+  animation-name: boxSlide;
+  animation-duration: 3s;
+}
+
+
+@keyframes boxSlide {
+  from{
+position: absolute;
+left: -300px;
+ }
+  to{
+    position: absolute;
+    left:0;
+bottom: 20px;
+
+  }
+}
+
+/**** HEADINGS ****/
+
+.mind{
+  position: relative;
+  animation-name: mindSlide;
+  animation-duration:3s;
+  color:white;
+
+}
+
+@keyframes mindSlide {
+  from{
+    position: relative;
+    right: 500px;
+    color: rgba(255, 255, 255, 0);
+  }
+  to{
+    left: 0;
+    color:white;
+
+  }
+
+}
+
+
+.body{
+  position: relative;
+  animation-name: bodySlide;
+  animation-duration:6s;
+  color:white;
+
+}
+
+
+@keyframes bodySlide {
+  from{
+    position: relative;
+    right: 500px;
+    color: rgba(255, 255, 255, 0);
+  }
+  to{
+    left: 0;
+    color:white;
+
+  }
+
+}
+
+.beyond{
+  position: relative;
+  animation-name: beyondSlide;
+  animation-duration:9s;
+  color:white;
+}
+
+@keyframes beyondSlide {
+  from{
+    position: relative;
+    right: 500px;
+    color: rgba(255, 255, 255, 0);
+  }
+  to{
+    color: rgba(255, 255, 255, 0.14);
+
+  }
+  to{
+    left: 0;
+    color: rgba(255, 255, 255, 1);
+
+  }
+
+}
+
+
+
+/* BENEFITS SECTION */
+
+#hp-benefits-section {
+  padding-top: 4%;
+  padding-bottom: 4%;
+background-color: rgb(246, 252, 244);
+}
+
+#hp-benefits-section .benefits-container{
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+.benefits-container ul{
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+#hp-benefits-section .benefits-container ul > li {
+  text-align: center;
+margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 25px;
+  color: rgb(89, 133, 85);
+  list-style-type: none;
+}
+
+
+
+/***** BUTTON *****/
+.button-container{
+  margin: 10% auto 5%;
+}
+
+.button-container a{
+font-size: 1.3rem;
+  padding-left: 40px;
+    padding-right: 40px;
+font-family: 'Open Sans', sans-serif;
+ color: rgb(24, 68, 21);
+  background-color: rgb(223, 215, 128);
+  border-color: rgb(250, 239, 154);
+}
+
+.benefits-container a:hover{
+  background-color: rgb(246, 252, 244);
+  border-color: rgb(255, 183, 34);
+  border-color:  rgb(24, 68, 21);
+  color:  rgb(24, 68, 21);
+}
+
+
+
+/*********************** FOOTER SECTION */
+#footer {
+  display: grid;
+    justify-content: center;
+  background-color: rgb(37, 50, 42);
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.footer-brand {
+  font-weight: bold;
+  color: white;
+  display: inline;
+  margin-right: 60px;
+  padding-bottom: 5%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(37, 50, 42);
+  font-size: 2.5rem;
+}
+
+.footer-containers-wrapper {
+  display: flex;
+}
+
+.footer-items-container{
+  margin: 0 80px;
+  line-height: 45px;
+}
+
+.footer-items-container p{
+  padding-bottom: 14px;
+}
+
+#footer a {
+  display: grid;
+  color: white;
+}
+
+#footer a:hover {
+  color: rgb(255, 179, 68);
+  text-decoration: none;
+
+}
+
+.copy-right {
+  text-align: center;
+  color: white;
+  padding: 5%;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/* modal */
+#modal-footer-wraper {
+  display: none;
+}
+
+
+
+.elementShow{
+  display: flex;
+}
+
+.elementHide{
+  display: none;
+}
+
+/********** BURGUER MENU  */
+header  .burger-menu-container{
+display: none;
+}
+
+/* Custom Burger Menu Styles */
+.burger-menu-container .burguer {
+  position: relative;
+ padding-bottom: 5px;
+ padding-top: 5px;
+  border: solid 1px #444941;
+  border-radius: 10%;
+}
+
+.burger-menu-container .burguer .line {
+  background-color: #444941;
+    width: 25px;
+    height: 3px;
+    margin: 6px 13px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu-container .burguer.active .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+ 
+.burger-menu-container .burguer.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu-container .burguer.active .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Burger Navigation Menu */
+.burger-menu-container .burger-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  visibility: hidden; /* Hidden by default */
+  opacity: 0; /* Fully transparent */
+  flex-direction: column;
+  z-index: 9999;
+  transition: visibility 0s, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Show menu */
+.burger-nav.show {
+  visibility: visible; /* Visible when toggled */
+  opacity: 1; /* Fully opaque */
+}
+
+.burger-nav li {
+    padding: 10px 20px;
+}
+
+.burger-nav a {
+    text-decoration: none;
+    color: #444941;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.burger-nav a:hover {
+    color: #598555;
+}
+
+
+/**********************************************************************  MEDIA SECTION ***/
+@media (max-width: 1000px) {
+  
+  header .burger-menu-container {
+    display: inline-block;
+  }
+
+  .navbar .largeNavbar-container{
+       display: none;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  /** COVER SECTION **/
+  .img-cover-container {
+    width: 100%;
+    height: 500px;
+  }
+
+  .cover-content {
+    width: 50%;
+    height: 200px;
+    padding: 20px 25px;
+    clear: both;
+  }
+
+  .cover-content h1 {
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .strong {
+    font-size: 1.9rem;
+  }
+
+  /* BENEFITS SECTION */
+  .benefits-container{
+    text-align: center;
+  }
+
+  .benefits-container ul{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .heading-benefits h1 {
+    font-size: 2.6rem;
+    letter-spacing: 5px;
+  }
+
+ul > li{
+  text-align: center;
+}
+
+  /* BUTTON*/
+  .button-container{
+    margin: 10% auto 5%;
+  }
+
+   .button-container a{
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+ color: rgb(24, 68, 21);
+  background-color: rgb(223, 215, 128);
+  border-color: rgb(250, 239, 154);
+  }
+
+
+  /***  MODAL FOOTER SECTION ****/
+
+  .footer-containers-wrapper {
+    display: none;
+  }
+
+  #modal-footer-wraper {
+    display: grid;
+    padding: 5% 7% 0 7%;
+  }
+
+  .modal-footer-container {
+    display: flex;
+    padding: 0 20%;
+
+  }
+
+  .modal-items-container {
+    display: flex;
+    line-height: 45px;
+
+  }
+
+  .modal-footer-links-container {
+    margin: 0 auto;
+  }
+
+  .modal-footer-social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+  }
+
+  .modal-footer-social-container a {
+    margin: auto 30px;
+  }
+
+  .modal-footer-brand {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+    background-color: rgb(37, 50, 42);
+
+  }
+
+
+nav .navbar-collapse {
+    display: flex;
+}
+}
+
+
+@media(max-width: 575px) {
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .cover-content {
+    width: 90%;
+    padding: 20px 20px;
+    position: relative;
+    top: 250px;
+    clear: both;
+  }
+
+  .cover-content h1 {
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .strong {
+    font-size: 2.3rem;
+  }
+
+  /* BENEFITS SECTION */
+  .heading-benefits h1 {
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin: 40px 3px 30px;
+  }
+
+  .benefits-container ul{
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  ul>li {
+    margin-bottom: 35px;
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+
+/* BUTTON */
+.button-container{
+  margin: 15% auto 15%;
+}
+.button-container a{
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 90%;
+   color: rgb(24, 68, 21);
+    background-color: rgb(223, 215, 128);
+    border-color: rgb(250, 239, 154);
+  }
+  .btn:focus{
+    outline: none;
+  }
+
+
+  /********************* FOOTER SECTION */
+  .footer-containers-wrapper {
+    display: none;
+  }
+
+  #modal-footer-wraper {
+    display: grid;
+    padding-top: 6%;
+  }
+
+  .modal-footer-container {
+    display: flex;
+  }
+
+  .modal-items-container {
+    display: flex;
+    line-height: 45px;
+
+  }
+
+  .modal-footer-links-container {
+    margin: 0 auto;
+  }
+
+  .modal-footer-social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+  .modal-footer-social-container a {
+    margin: auto 30px;
+  }
+
+  .modal-footer-brand {
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+    background-color: rgb(37, 50, 42);
+  }
+
+
+#hp-benefits-section .benefits-container{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.benefits-container ul{
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+#hp-benefits-section .benefits-container ul > li {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 35px;
+  font-weight: 500;
+  color: rgb(89, 133, 85);
+  list-style-type: none;
+}
+
+}
+
+  /***********************  AI SECTION FEATURES */
+/* AI Features Section */
+#ai-features {
+  position: relative;
+  overflow: hidden;
+  color: white; /* Ensure text readability */
+}
+
+/* Video Background */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover; /* Ensures video fills the section */
+  z-index: -1; /* Pushes the video behind the content */
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  z-index: 0; /* Sits between the video and content */
+}
+
+/* Content Container */
+#ai-features .container {
+  position: relative;
+  z-index: 1; /* Brings content in front of the overlay */
+}

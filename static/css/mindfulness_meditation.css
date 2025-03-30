@@ -1,0 +1,187 @@
+/* CSS Variables */
+:root {
+  --primary-bg: rgb(246, 252, 244);
+  --secondary-bg: rgb(37, 50, 42);
+  --highlight-bg: rgb(203, 188, 109);
+  --primary-color: #444941;
+  --secondary-color: rgb(255, 179, 68);
+  --accent-color: rgb(246, 200, 133);
+  --link-color: rgb(56, 154, 195);
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --base-padding: 3%;
+  --border-radius: 10px;
+}
+
+/* General Styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+header {
+  background-color: var(--primary-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Reviews Container */
+.review-container {
+  text-align: center;
+  margin: 50px auto;
+  background-color: var(--highlight-bg);
+  height: 120px;
+  padding: var(--base-padding);
+  border-radius: var(--border-radius);
+  width: 40%;
+}
+
+.review-container a {
+  margin: 0 20px;
+}
+
+/* Footer */
+#footer {
+  background-color: var(--secondary-bg);
+  padding-top: 5%;
+}
+
+.footer-brand {
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: white;
+}
+
+.footer-items-container {
+  margin: 0 80px;
+  line-height: 45px;
+}
+
+.footer-items-container p {
+  padding-bottom: 14px;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: var(--secondary-color);
+}
+
+.copy-right {
+  text-align: center;
+  color: white;
+  padding: 5%;
+  font-size: 16px;
+}
+
+/* Modal Footer */
+#modal-footer-wraper {
+  display: none;
+}
+
+/* Page Content */
+.mindfulness_meditation-main-wraper {
+  padding: var(--base-padding) 15%;
+  line-height: 31px;
+  list-style: none;
+
+}
+
+.mindfulness_meditation-main-wraper h1, h2, h3, h5 {
+  background-color: rgb(255, 250, 200);
+}
+
+.mindfulness_meditation-main-wraper h3,h2 {
+  margin-top: 60px;
+  margin-bottom: 35px;
+}
+
+.video-intro-mindAndMeditation {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mindfulness_meditation-main-wraper li::before {
+  content: "\2022";
+  color: rgb(179, 0, 203);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.mindfulness_meditation-main-wraper li {
+  color: var(--primary-color);
+}
+
+.positions-container img {
+  margin: 30px 50px 60px 0;
+  width: 350px;
+  height: 210px;
+}
+
+.mindfulness-benefits-container ul li{
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 990px) {
+  
+  .review-container {
+    width: 60%;
+    font-size: 19px;
+  }
+
+  .mindfulness_meditation-main-wraper {
+    padding: var(--base-padding);
+  }
+
+  #video-1 {
+    width: 450px;
+    height: 290px;
+  }
+
+  .positions-container img {
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+ 
+  .review-container {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .mindfulness_meditation-main-wraper {
+    text-align: center;
+  }
+
+  #video-1 {
+    width: 300px;
+    height: 180px;
+  }
+
+  .positions-container img {
+    width: 100%;
+    height: 190px;
+  }
+}

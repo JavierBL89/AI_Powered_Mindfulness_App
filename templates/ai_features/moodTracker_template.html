@@ -1,0 +1,16 @@
+{% block moodTracker %}
+<div id="progress-tracker">
+    <div id="tracker-panel" class="hidden">
+        <h4>How do you feel today?</h4>
+        <form id="mood-form">
+            <label for="mood">...tell more than just <i>"Fine"</i> or <i> "Sad"</i> !</label>
+            <input id="mood"/>
+            <button type="button">Log Feeling</button>
+        </form>
+        <div id="chatbot-body">
+            <!-- Progress visualization -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

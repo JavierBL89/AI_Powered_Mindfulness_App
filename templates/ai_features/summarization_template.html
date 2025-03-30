@@ -1,0 +1,15 @@
+{% block summarizator %}
+
+<div id="summarizator-container">
+
+    <div id="summarizator-body">
+        <!-- Chat content dynamically loaded here -->
+    </div>
+    
+</div>
+
+{% block extra_js %}
+    <script type="module" src="{{ url_for('static', filename='js/summarizator.js') }}"></script>
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %}Body Scan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bodyScan.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- TOP NAVIGATION BAR  -->
+{% include 'topNavBar.html' %}
+<!-- MOBILE NAVIGATION BAR  -->
+{% include 'fixedMobileTopNavBar.html' %}
+
+<div class="top-page-navigation" style="padding-top:3%; padding-bottom: 3%;">
+  <div class="top-page-items-navigation">
+    <a href="#get-started">GET STARTED</a>
+    <a href="#make-a-habit" class="active">MAKE A HABIT</a>
+    <a href="#guided-meditation">GUIDED MEDITATION</a>
+  </div>
+</div>
+
+
+<div class="main-wraper">
+
+    <!-- AI TOOLS  -->
+    {% include 'aiFeaturesBaseTemplate.html' %}
+
+  <h1>How to do a Body Scan Meditation</h1>
+  <hr />
+
+  <img src="assets/images/Mindfulness-retreat-1kom-geo.jpg" alt="body-scan-meditation-group">
+  <br><br>
+  <p><strong>Body scan</strong>, a meditative practice that involves mindfully scanning your body for sensations of
+    pain, tension, or anything out of the ordinary.</p>
+  <p>
+    Developing greater awareness of bodily sensations can help you feel more connected to your physical self and gain
+    greater insight into potential causes of unwanted feelings.
+  </p>
+  <p>
+    This knowledge can make it easier to address what’s wrong, leading to improved wellness in body and mind.
+  </p>
+
+  <h4>Why it's worth trying?</h4>
+  <p>
+    Experts have found evidence to suggest meditation can promote physical and emotional wellness in multiple ways, such
+    as:
+  </p>
+  <ul>
+    <li>improved sleep</li>
+    <li>anxiety and stress relief</li>
+    <li>greater self-awareness</li>
+    <li>increased self-compassion</li>
+    <li>reduced pain</li>
+    <li>reduced cravings</li>
+  </ul>
+
+  <section id=get-started>
+
+    <h3>How to get started</h3>
+    <p>
+      You can think of a body scan as a mental X-ray that slowly travels across your body.
+    </p>
+    <p>
+      Here’s how to give it a try:
+    </p>
+    <ol>
+      <li><b>Get cozy</b>. Start by getting comfortable. Lie down or sit in a position that allows you to stretch your
+        limbs easily.</li>
+      <li><b>Choose where to start</b>. Begin anywhere you like — left hand, left foot, right hand, right foot, the top
+        of your head. Focus on that spot as you continue breathing slowly and deeply.</li>
+      <li><b>Pay attention</b>. Open your awareness to sensations of pain, tension, discomfort, or anything out of the
+        ordinary.</li>
+      <li><b>Go slow</b>. Spend anywhere from 20 seconds to 1 minute observing these sensations.</li>
+      <li><b>Acknowledge</b>. If you begin to notice pain and discomfort, acknowledge and sit with any emotions these
+        sensations bring up. Accept them without criticism. For example, if you feel frustrated and angry, don’t judge
+        yourself for these emotions. Notice them and let them pass.</li>
+      <li><b>Breathe</b>. Continue breathing, imagining the pain and tension decreasing with each breath.</li>
+      <li><b>Release</b>. Slowly release your mental awareness on that specific part of your body and redirect it to
+        your next area of focus. Some people find it helpful to imagine releasing one body part as they breathe out and
+        moving on to the next as they breathe in.</li>
+      <li><b>Move along</b>. Continue the exercise along your body in a way that makes sense to you, whether you move
+        from top to bottom or up one side and down the other.</li>
+      <li><b>Note drifting thoughts</b>. As you continue to scan across your body, note when your thoughts begin to
+        drift. This will happen probably more than once, so don’t worry. You haven’t failed, and you can easily get your
+        thoughts back on track. Just gently return your awareness to where you left off scanning.</li>
+      <li><b>Visualize and breathe</b>. Once you finish scanning parts of your body, let your awareness travel across
+        your body. Visualize this as liquid filling a mold. Continue inhaling and exhaling slowly as you sit with this
+        awareness of your whole body for several seconds.</li>
+      <li><b>Come back</b>. Slowly release your focus and bring your attention back to your surroundings.</li>
+    </ol>
+    <div id="make-a-habit"></div>
+  </section>
+
+
+  <section>
+    <h3>Make it a habit</h3>
+    <p>You may notice some improvement immediately. Then again, the body scan might not seem to have any effect at all.
+      It could also awaken your awareness around discomfort, making it seem worse.</p>
+    <p>
+      This might put you off meditation entirely, but try to commit to a few more attempts to see if things improve.
+    </p>
+    <p>
+      Plenty of people don’t enjoy meditation or notice any benefits the first few times they try it. But experts
+      suggest it’s still worth meditating regularly, even if you don’t love it.
+    </p>
+    <p>
+      Consistent meditation can lead to positive changes in your brain, including:
+
+    <ul>
+      <li>improved focus</li>
+      <li>increased compassion and other positive emotions
+      </li>
+      <li>greater ability to cope with unwanted emotions
+      </li>
+
+    </ul>
+    <p>
+      If it helps, you can think of meditation as an exercise for your brain. Maybe you don’t feel like working up a
+      sweat all the time, especially if you’ve already had a rough day. But once you get going, your workout generally
+      becomes easier, right?
+    </p>
+    <p>
+      When you finish exercising, you might even feel pretty good, and keeping up an exercise routine usually makes it
+      easier over time.
+    </p>
+
+    <h3>Beginner tip</h3>
+    <p>If a body scan or any type of <em>meditation</em> doesn’t seem to do much for you the first time, try not to get
+      discouraged. It can take some time to get used to meditation, and that’s completely normal.</p>
+    <div id="guided-meditation"></div>
+  </section>
+
+  <section>
+    <h3>Guided Body Scan Meditation</h3>
+
+    <div class="meditation-video-container">
+      <h5 style="background-color: inherit;">Body Scan Meditation</h5>
+      <iframe id="video-1" src="https://www.youtube.com/embed/pyy3dHW4cSw" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    </div>
+    <div class="meditation-video-container">
+      <h5 style="background-color: inherit;">For Positive mind & body healing</h5>
+      <iframe id="video-2" src="https://www.youtube.com/embed/i7xGF8F28zo" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    </div>
+    <div class="meditation-video-container">
+      <h5 style="background-color: inherit;">Mindfulness Body scan</h5>
+      <iframe id="video-3" src="https://www.youtube.com/embed/aWPCJ_hOlXk" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+  </section>
+</div>
+
+{% include 'reviewComponent.html' %}
+
+{% endblock %}

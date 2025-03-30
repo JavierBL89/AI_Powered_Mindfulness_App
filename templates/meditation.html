@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+
+{% block title %}Meditation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/meditation.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- TOP NAVIGATION BAR  -->
+{% include 'topNavBar.html' %}
+<!-- MOBILE NAVIGATION BAR  -->
+{% include 'fixedMobileTopNavBar.html' %}
+
+<div class="top-page-navigation" style="padding-top:3%; padding-bottom: 3%;">
+  <div class="top-page-items-navigation">
+    <a href="#practice">HOW TO PRACTICE IT</a>
+    <a href="#types">TYPES OF MEDITATION</a>
+    <a href="#benefits">BENEFITS</a>
+
+  </div>
+
+</div>
+
+
+<div class="meditation-main-wraper">
+
+    <!-- AI TOOLS  -->
+    {% include 'aiFeaturesBaseTemplate.html' %}
+    
+  <div class="intro-meditation-container">
+
+    <h1>What Meditation actually is?</h1>
+    <hr />
+    <img src="../static/images/IMG_0538.jpg" alt="man-sited-meditating">
+    <br><br>
+    <p>
+      <strong>"Mediation</strong> is a practice where an individual uses a technique – such as <a
+        href="mindfulness.html"><em>mindfulness</em></a>, or focusing the mind on a particular object,
+      thought, or activity – to train attention
+      and awareness, and achieve a mentally clear and emotionally calm and stable state.
+    </p>
+
+    <div class="meditation-video-container">
+      <h3>So interesting!</h3>
+      <p>4min long</p>
+      <iframe id="video-1" src="https://www.youtube.com/embed/CmhkmLFc74E" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <br><br>
+    <div id="types"></div>
+  </div>
+
+  <section>
+    <p>These days, with the greater need to reduce stress in the midst of our busy schedules and demanding lives,
+      meditation is increasing in popularity.</p>
+    <p>Although there isn’t a right or wrong way to meditate, it’s important to find a practice that meets your needs
+      and complements your personality.</p>
+    <p>There are nine popular <strong>types of meditation</strong> practice:</p>
+    <ul>
+      <li>mindfulness meditation</li>
+      <li>spiritual meditation</li>
+      <li>focused meditation</li>
+      <li>movement meditation</li>
+      <li>mantra meditation</li>
+      <li>trascendetal meditation</li>
+      <li>progressive relaxation</li>
+      <li>loving-kindness meditation</li>
+      <li>visualization meditation</li>
+
+    </ul>
+
+    <h3 class="meditation-types">Mindfulness meditation</h3>
+    <p>Mindfulness meditation originates from Buddhist teachings and is the most popular meditation technique in the
+      West.</p>
+    <p>In mindfulness meditation, you pay attention to your thoughts as they pass through your mind. You don’t judge the
+      thoughts or become involved with them. </p>
+    <p>This practice combines concentration with awareness. You may find it helpful to focus on an object or your breath
+      while you observe any bodily sensations, thoughts, or feelings.</p>
+    <p>This type of meditation is good for people who don’t have a teacher to guide them, as it can be easily practiced
+      alone.</p>
+    <h5 class="iniciate-link"><a href="mindfulness&meditation.html" target="_blank">INICIATE WITH MINDFULNESS
+        MEDITATION!</a></h5>
+    <h3 class="meditation-types">Spiritual meditation</h3>
+    <p>Spiritual meditation is used in Eastern religions, such as Hinduism and Daoism, and in Christian faith.
+    </p>
+    <p>
+      It’s similar to prayer in that you reflect on the silence around you and seek a deeper connection with your God or
+      Universe.
+    </p>
+    <p>Spiritual meditation can be practiced at home or in a place of worship. This practice is beneficial for those who
+      thrive in silence and seek spiritual growth.</p>
+    <br>
+    <p>
+      Essential oils are commonly used to heighten the spiritual experience. Popular options include:
+    </p>
+    <ul>
+      <li>frankincense</li>
+      <li>myrrh</li>
+      <li>sage</li>
+      <li>cedar</li>
+      <li>sandalwood</li>
+      <li>palo santo</li>
+    </ul>
+    <h3 class="meditation-types">Focused meditation</h3>
+    <p>Focused meditation involves concentration using any of the five senses.
+      <br>
+      For example, you can focus on something internal, like your breath, or you can bring in external influences to
+      help focus your attention.
+    </p>
+    <p>This practice may be simple in theory, but it can be difficult for beginners to hold their focus for longer than
+      a few minutes at first.
+      <br />
+      If your mind does wander, it’s important to come back to the practice and refocus.
+    </p>
+    <ul>
+      <li><i> 3min </i>
+        <br>
+        <a href="https://youtu.be/4Bs0qUB3BHQ" target="_blank">Meditation to Stay Focus</a>
+      </li>
+      <li><i> 10min</i>
+        <br>
+        <a href="https://youtu.be/ausxoXBrmWs" target="_blank"> Guided Meditation for Focus</a>
+      </li>
+    </ul>
+    <p>This practice is ideal for anyone who requires additional focus in their life.</p>
+    <h3 class="meditation-types">Movement meditation</h3>
+    <p>
+      Although most people think of yoga when they hear movement meditation, this practice may include walking through
+      the woods, gardening, qigong, and other gentle forms of motion.
+    </p>
+    <p>
+      It’s an active form of meditation where the movement guides you.
+    </p>
+    <h5 class="iniciate-link"><a href="https://www.mindful.org/daily-mindful-walking-practice/" target="_blank">LET'S
+        TRY IT!</a></h5>
+    <p></p>
+    <h3 class="meditation-types">Mantra meditation</h3>
+    <p>
+      Mantra meditation is prominent in many teachings, including Hindu and Buddhist traditions. This type of meditation
+      uses a repetitive sound to clear the mind. It can be a word, phrase, or sound, such as the popular “Om.”
+    </p>
+    <p>
+      It doesn’t matter if your mantra is spoken loudly or quietly. After chanting the mantra for some time, you’ll be
+      more alert and in tune with your environment. This allows you to experience deeper levels of awareness.
+    </p>
+    <p>
+      Some people enjoy mantra meditation because they find it easier to focus on a word than on their breath. This is
+      also a good practice for people who don’t like silence and enjoy repetition.
+    </p>
+    <p>Mantra is a Sanskrit term, with “man” meaning “mind” and “tra” meaning “release.”
+
+      Think of a mantra — a word or phrase you repeat during meditation — as a tool to help release your mind. It can
+      make a lot of difference, especially if you have trouble concentrating or getting in the right frame of mind.
+    </p>
+    <p>
+      Many people find that using a mantra can boost awareness and improve concentration. Since it helps you stay
+      focused, it could lead to improved results from meditation.
+    </p>
+    <h3 class="meditation-types">Trascendental meditation</h3>
+    <p>
+      Transcendental Meditation is a popular type of meditation. This practice has been the subject of numerous studies
+      in the scientific community.
+    </p>
+    <p>
+      It is more customizable than mantra meditation, using a mantra or series of words that are specific to each
+      practitioner.
+    </p>
+    <p>
+      This practice is for those who like structure and are serious about maintaining a meditation practice.
+    </p>
+    <h3 class="meditation-types">Progressive relaxation</h3>
+    <p>
+      Also known as body scan meditation, progressive relaxation is a practice aimed at reducing tension in the body and
+      promoting relaxation.
+    </p>
+    <p>
+      Oftentimes, this form of meditation involves slowly tightening and relaxing one muscle group at a time throughout
+      the body.
+    </p>
+    <p>
+      In some cases, it may also encourage you to imagine a gentle wave flowing through your body to help release any
+      tension.
+    </p>
+    <p>
+      This <a href="bodyScan.html">form of meditation</a> is often used to relieve stress and unwind before bedtime.
+    </p>
+    <h3 class="meditation-types">Loving-kindness meditation</h3>
+    <p>
+      Loving-kindness meditation is used to strengthen feelings of compassion, kindness, and acceptance toward oneself
+      and others.
+    </p>
+    <p>
+      It typically involves opening the mind to receive love from others and then sending a series of well wishes to
+      loved ones, friends, acquaintances, and all living beings.
+    </p>
+    <p>
+      Because this type of meditation. also known as <em>metta meditation</em> is intended to promote compassion and
+      kindness, it may be ideal for those holding feelings of anger or resentment.
+    </p>
+    <p>The goal of metta meditation is to cultivate kindness for all beings, including yourself and:</p>
+    <ul>
+      <li>family</li>
+      <li>friends</li>
+      <li>neighbors</li>
+      <li>acquaintances</li>
+      <li>difficult people in your life</li>
+      <li>animals</li>
+    </ul>
+    <p>The main technique of metta meditation involves reciting positive phrases toward yourself and these beings</p>
+
+    <h3 class="meditation-types">Visualization meditation</h3>
+    <p>
+      Visualization meditation is a technique focused on enhancing feelings of relaxation, peace, and calmness by
+      visualizing positive scenes or images.
+    </p>
+    <p>
+      With this practice, it’s important to imagine the scene vividly and use all five senses to add as much detail as
+      possible.
+    </p>
+    <p>
+      Another form of visualization meditation involves imagining yourself succeeding at specific goals, which is
+      intended to increase focus and motivation.
+    </p>
+    <p>
+      When you visualize, you focus on something specific — an event, person, or goal you want to achieve — and hold it
+      in your mind, imagining your outcome becoming reality.
+    </p>
+    <br>
+    <div id="powerful-meditation-container">
+      <h5>Powerful Visualitation Meditation</h5>
+      <br />
+      <iframe id="video-2" src="https://www.youtube.com/embed/NVPrxcR_RZI" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div id="practice"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How do i practise meditation?</h2>
+    <p>Simple steps to do it on your own, make sure you’re somewhere where you can relax into this process, set a timer,
+      and give it a shot:</p>
+    <ol>
+      <li>Take a seat
+        Find place to sit that feels calm and quiet to you.</li>
+      <li>Set a time limit
+        If you’re just beginning, it can help to choose a short time, such as five or 10 minutes.</li>
+      <li>Notice your body
+        You can sit in a chair with your feet on the floor, you can sit loosely cross-legged, you can kneel—all are
+        fine. Just make sure you are stable and in a position you can stay in for a while.</li>
+      <li> Feel your breath
+        Follow the sensation of your breath as it goes in and as it goes out.</li>
+      <li>Notice when your mind has wandered
+        Inevitably, your attention will leave the breath and wander to other places. When you get around to noticing
+        that your mind has wandered—in a few seconds, a minute, five minutes—simply return your attention to the breath.
+      </li>
+      <li>Be kind to your wandering mind
+        Don’t judge yourself or obsess over the content of the thoughts you find yourself lost in. Just come back.</li>
+      <li>Close with kindness
+        When you’re ready, gently lift your gaze (if your eyes are closed, open them). Take a moment and notice any
+        sounds in the environment. Notice how your body feels right now. Notice your thoughts and emotions.</li>
+    </ol>
+
+    <h6 style="color:#444941">Also you can choose any type of meditation that we've seen before that suits you better!
+    </h6>
+
+    <h6>MINDFUL MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/Cp7pnHCY94U" target="_blank">Guided Mindful Breathing Meditation</a>
+      </li>
+      <li>
+        <a href="#https://youtu.be/i7xGF8F28zo" target="_blank">Guided Body Scan Meditaion</a>
+      </li>
+      <li>
+        <a href="https://youtu.be/-2zdUXve6fQ" target="_blank">Guided Meditation for Being Present</a>
+      </li>
+    </ul>
+
+    <h6>SPIRITUAL MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/G0QdWOcB6Ho" target="_blank">Guided Spiritual Meditation</a>
+      </li>
+    </ul>
+
+    <h6>FOCUSED MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/ausxoXBrmWs" target="_blank">Guided Focused Meditation</a>
+      </li>
+    </ul>
+
+    <h6>MANTRA MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/vbVh43mTHF4" target="_blank">Guided Mantra Meditation For Beguinners</a>
+      </li>
+      <li>
+        <a href="https://youtu.be/vH11undyI2o" target="_blank">Mantra Meditation Backgroun Sound</a>
+      </li>
+      <li>
+        <a href="https://youtu.be/JEoxUG898qY" target="_blank">Mantra Meditation</a>
+      </li>
+    </ul>
+
+    <h6>TRANSCENDENTAL MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/1oCJ1MIjEF4" target="_blank">Guided Transcendental Meditation</a>
+      </li>
+    </ul>
+
+    <h6>PROGRESIVE RELAXATION MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/86HUcX8ZtAk" target="_blank">Guided Muscle Relaxation Meditation</a>
+      </li>
+    </ul>
+
+    <h6>LOVING KINDNESS MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/sz7cpV7ERsM" target="_blank">Guided Loving-Kindness Meditation</a>
+      </li>
+    </ul>
+
+    <h6>VISUALITATION MEDITATION</h6>
+    <ul>
+      <li>
+        <a href="https://youtu.be/NVPrxcR_RZI" target="_blank">Powerful Guided Visualitation Meditation</a>
+      </li>
+      <li>
+        <a href="https://youtu.be/t1rRo6cgM_E" target="_blank">Guided Imagery Meditation</a>
+      </li>
+
+    </ul>
+    <div id="benefits"></div>
+  </section>
+
+
+  <section id="benefits-section">
+
+    <div class="benefits-container">
+      <h2>Benefits</h2>
+      <ul>
+        <li><b>Better focus and concentration.</b> Mindfulness
+          meditation helps you focus on the present, which can improve your concentration on other tasks in daily life.
+        </li>
+        <li><b>Improve self-esteem and self-awareness.</b> Meditation encourages you to slow down, allows for deeper
+          self-reflection, and can help you discover positive attributes about yourself.</li>
+        <li><b>Reduce stress. </b> Meditation can also lower the levels of cortisol(the stress hormone)which helps you
+          feel more relaxed.</li>
+        <li><b>Manage anxiety or depression.</b> Mindfulness meditation helps train your mind to focus on the present,
+          making you less likely to ruminate on anxious thoughts that can fuel depression.</li>
+        <li><b>Fight addiction. </b>May reduce cravings for substances. Additionally, mindfulness meditation can
+          increase your awareness of cravings and allow you to better manage them.</li>
+        <li><b>Make you more kind or loving. </b>Loving kindness meditation can foster compassion for yourself and
+          others.</li>
+      </ul>
+    </div>
+
+  </section>
+</div>
+{% include 'reviewComponent.html' %}
+
+{% endblock %}

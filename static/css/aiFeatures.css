@@ -1,0 +1,419 @@
+/* CSS Variables */
+:root {
+    --primary-bg: rgb(246, 252, 244);
+    --secondary-bg: rgb(37, 50, 42);
+    --highlight-bg: rgb(203, 188, 109);
+    --primary-color: #444941;
+    --secondary-color: rgb(255, 179, 68);
+    --accent-color: rgb(246, 200, 133);
+    --link-color: rgb(56, 154, 195);
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --base-padding: 3%;
+    --border-radius: 10px;
+  }
+  
+  #ai-features h2,  #ai-features  h3{
+    background-color: transparent;
+  }
+  /* General Styles */
+  #ai-tools-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+}
+
+#ai-tools-main-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ai-tools-main-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#ai-tools-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hide options when hidden */
+/* #ai-tools-options.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+} */
+
+/* Show options when expanded */
+#ai-tools-container.expanded #ai-tools-options {
+    display: flex; /* Show options when expanded */
+    flex-direction: column; /* Stack options vertically */
+    gap: 10px;
+}
+
+.ai-tool-btn {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-tool-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic container styling */
+#ai-tools-container {
+    position: relative;
+    left: 0;
+    display: inline-block;
+}
+
+/* Main button styling */
+#ai-tools-main-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Options container styling */
+#ai-tools-options {
+    display: none; /* Start hidden */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Positioned to the right of the main button */
+    width: 0;
+    height: auto;
+    background-color: #f9f9f9;
+    box-shadow: 3px 10px 14px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Options expanded styling */
+#ai-tools-container:hover #ai-tools-options,
+#ai-tools-container.expanded #ai-tools-options {
+    width: 200px; /* Set the width for expanded state */
+}
+
+/* Buttons inside the options */
+.ai-tool-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.ai-tool-btn:hover {
+    background-color: #f0f0f0;
+}
+
+#ai-tools-container.expanded #ai-tools-options {
+    display: block; /* Show when expanded */
+}
+
+/* -------------- AI Interaction Container -------------- */
+.ai-interaction-container-hidden{
+    visibility: hidden;
+}
+
+#ai-interaction-container{
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+#chatbot-container{
+    border: solid 2px rgb(1, 111, 6, 0.3);
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+    width: 100%;
+}
+
+#chatbot-window{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 20px; */
+    margin: 20px auto;
+    margin-bottom: 20px;
+    /* width: 70%; */
+    max-width: 700px;
+}
+
+#chatbot-body{
+    display: block;
+}
+
+#chatbot-input{
+    visibility: visible;
+    overflow: visible;
+    animation: none !important;
+    width: 60%;
+    border: none;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    caret-color: #000;  /* Black blinking cursor */
+}
+
+#chatbot-input::placeholder{
+   font-style: italic;
+}
+
+#chatbot-input:focus {
+    outline: none;  /* Remove default browser outline */
+    border-color: #007BFF;  /* Blue border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Blue glow */
+    caret-color: #007BFF;  /* Blue cursor */
+}
+
+#chatbot-response{
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+#chatbot-container button{
+    border: none;
+    background-color: inherit;
+}
+
+#chatbot-suggestions-container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+#chatbot-container .suggestion-button{
+    height: 55px;
+    width: 200px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: aquamarine;
+    border: solid 3px green;
+    margin: 30px;
+}
+
+
+
+/* ------ Summarizer --------- */
+#summarizator-container{
+    border: solid 2px rgb(1, 111, 6, 0.3);
+    border-radius: 5px;
+    width: 90%;
+    min-height: 60px;
+    margin: 0 auto;
+    max-height: fit-content;
+}
+
+.summarizer-response{
+    padding: 20px;
+}
+
+
+ /* ---------- Mood tracker ------ */
+ #progress-tracker{
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ #tracker-panel #mood-form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+ }
+
+  #tracker-panel #mood-form input{
+   border-radius: 10px;
+   margin-bottom: 10px;
+   border: solid 0.5px rgb(198, 213, 204);
+   height: 50px;
+   padding-left:10px ;
+   letter-spacing: 0.5px;
+ }
+
+ #tracker-panel #mood-form button{
+    border-radius: 10px;
+    width: 30%;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: rgb(37, 50, 42);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .mood-chatbot-response{
+      border: solid 2px rgb(1, 111, 6, 0.3);
+      border-radius: 5px;
+      padding: 20px;
+      width: 90%;
+      min-height: 60px;
+      margin: 0 auto;
+      max-height: fit-content;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1000px) {
+    #ai-tools-container:hover #ai-tools-options,
+    #ai-tools-container.expanded #ai-tools-options {
+        height: auto; /* Allow full expansion */
+        width: auto; /* Use full width */
+    }
+
+    #ai-tools-options {
+        position: absolute;
+        top: 0;
+        left: 100%; /* Positioned to the right of the main button */
+        width: auto;
+        height: auto; /* Allow content height */
+        padding: 0; /* Remove extra spacing */
+        border: none; /* Simplify for small screens */
+        box-shadow: none;
+        margin-top: 0;
+    }
+
+    .ai-tool-btn {
+        font-size: 14px;
+    }
+
+    #chatbot-suggestions-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #ai-tools-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        text-align: left; /* Change to left to prevent centering */
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack options vertically */
+        align-items: flex-end; /* Align items to the right */
+    }
+    
+    #ai-tools-options {
+        position: absolute;
+        top: 0;
+        left: 108%; /* Positioned to the right of the main button */
+        width: auto;
+        height: auto; /* Allow content height */
+        padding: 0; /* Remove extra spacing */
+        border: none; /* Simplify for small screens */
+        box-shadow: none;
+        margin-top: 0;
+    }
+
+    /* Show options when expanded */
+#ai-tools-container.expanded #ai-tools-options {
+    display: flex; /* Show options when expanded */
+    flex-direction: row; /* Stack options vertically */
+}
+
+    #ai-tools-main-btn {
+        width: fit-content;
+        position: relative;
+        left: 0;
+        /* padding: 15px; */
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #ai-tools-main-btn span{
+        display: none;
+    }
+    .ai-tool-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: 1px solid #ddd; /* Add dividers */
+    }
+
+    .ai-tool-btn:last-child {
+        border-bottom: none; /* Remove divider for last button */
+    }
+
+    #ai-tools-options button span{
+        display: none;
+    }
+
+    .summarizer-response {
+        padding: 20px;
+        text-align: left;
+        
+    }
+
+    #chatbot-suggestions-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    #chatbot-container .suggestion-button{
+        margin: 20px auto;
+    }
+
+    #tracker-panel #mood-form {
+        width: 95%;
+      }
+
+      #tracker-panel #mood-form button{
+        width: 85%;
+        font-size: 14px;
+      }
+
+      #tracker-panel #mood-form input {
+        border-radius: 10px;
+        margin-bottom: 10px;
+        border: solid 0.5px rgb(198, 213, 204);
+        height: 50px;
+        padding-left: 10px;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+    }
+  }
+  

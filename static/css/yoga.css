@@ -1,0 +1,177 @@
+/* CSS Variables */
+:root {
+  --primary-bg: rgb(246, 252, 244);
+  --secondary-bg: rgb(37, 50, 42);
+  --highlight-bg: rgb(203, 188, 109);
+  --primary-color: #444941;
+  --secondary-color: rgb(255, 179, 68);
+  --accent-color: rgb(246, 200, 133);
+  --link-color: rgb(56, 154, 195);
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --base-padding: 3%;
+  --border-radius: 10px;
+}
+
+/* General Styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Reviews Container */
+.review-container {
+  text-align: center;
+  margin: 50px auto;
+  background-color: var(--highlight-bg);
+  height: 120px;
+  padding: var(--base-padding);
+  border-radius: var(--border-radius);
+  width: 40%;
+}
+
+.review-container a {
+  margin: 0 20px;
+}
+
+/* Footer */
+#footer {
+  background-color: var(--secondary-bg);
+  padding-top: 5%;
+}
+
+.footer-brand {
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: white;
+}
+
+.footer-items-container {
+  margin: 0 80px;
+  line-height: 45px;
+}
+
+.footer-items-container p {
+  padding-bottom: 14px;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: var(--secondary-color);
+}
+
+.copy-right {
+  text-align: center;
+  color: white;
+  padding: 5%;
+  font-size: 16px;
+}
+
+/* Modal Footer 
+#modal-footer-wraper {
+  display: none;
+}
+*****/
+
+/* Page Content */
+.yoga-main-wraper {
+  padding: var(--base-padding) 15%;
+  line-height: 31px;
+  list-style: none;
+  text-align: left;
+
+}
+
+.yoga-main-wraper h1, h2, h3, h4, h5 {
+  background-color: rgb(255, 250, 200);
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+
+.yoga-main-wraper h2{
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.yoga-main-wraper ul {
+  list-style: none;
+}
+
+.yoga-main-wraper ul li::before {
+  content: "\2022";
+  color: rgb(179, 0, 203);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.yoga-main-wraper ul li {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1000px) {
+  
+  .review-container {
+    width: 60%;
+    font-size: 19px;
+  }
+
+  .yoga-main-wraper {
+    padding: var(--base-padding);
+  }
+
+  h1, h2,h3, h4{
+    text-align: center;
+  }
+
+  .yoga-main-wraper ul li{
+    text-align: left;
+  }
+
+  #video-1, #video-2 {
+    width: 450px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .review-container {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .yoga-main-wraper {
+    text-align: center;
+  }
+
+  #video-1, #video-2 {
+    width: 300px;
+    height: 180px;
+  }
+}
