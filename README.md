@@ -1,6 +1,3 @@
-# MINDFULNESS-MEDITATION-Code-Institute-Project
-
-https://javierbl89.github.io/MINDFULNESS-MEDITATION-Code-Institute-Project/index.html
 
 ## Project Overview
 
@@ -15,6 +12,9 @@ I turned this basic app into a Full Stack AI Powered Flask Application to provid
 
 
 Therefore the App engage users by leveraging Natural Laguage Processing(NLP) models.
+
+### Original Project Mind&Body-Code-Institute-Project
+https://javierbl89.github.io/MINDFULNESS-MEDITATION-Code-Institute-Project/index.html
 
 
 ## Lessons Learned
