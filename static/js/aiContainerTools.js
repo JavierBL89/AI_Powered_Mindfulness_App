@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             aiToolsContainer.classList.toggle('expanded'); // close 'ai-tools-container
 
-            console.log(`Button clicked: ${button.dataset.tool}`);
             interactionContainer.classList.remove('ai-interaction-container-hidden'); // open tool interaction container
 
             fetch(`/load_tool_template/${button.dataset.tool}`)
@@ -32,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .then(html => {
                     interactionContainer.innerHTML = html;
-                    console.log(`${button.dataset.tool} content loaded`);
                     if (button.dataset.tool === "chatbot") {
                         // Scroll to top when clicking the button
                         scrollUp();
@@ -50,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
     // Scroll to top when clicking the button
     const scrollUp = ()=>{
             window.scrollTo({
@@ -58,4 +57,38 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         };
 
+
+       /**
+        * The function `setupEnterKeyListener` sets up an event listener for the Enter key on a
+        * specified input field and triggers a callback function when Enter is pressed.
+        * @param inputId - The `inputId` parameter is the id of the input field to which you want to
+        * attach the Enter key listener.
+        * @param callback - The `callback` parameter in the `setupEnterKeyListener` function is a
+        * function that will be triggered when the Enter key is pressed in the input field. You can
+        * pass any function as the `callback` parameter, and it will be executed when the Enter key is
+        * pressed.
+        * @param [allowMultiline=false] - The `allowMultiline` parameter in the `setupEnterKeyListener`
+        * function is a boolean flag that determines whether the Enter key should create a new line in
+        * the input field when pressed along with the Shift key. If `allowMultiline` is set to `true`,
+        * pressing Enter with Shift will create
+        * @returns ⚠️ Input field with id="inputId" not found
+        */
+        function setupEnterKeyListener(inputId, callback, allowMultiline = false) {
+            const inputField = document.getElementById(inputId);
+            if (!inputField) {
+                console.warn(`⚠️ Input field with id="${inputId}" not found`);
+                return;
+            }
+        
+            inputField.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    if (allowMultiline && event.shiftKey) {
+                        // Allow new line
+                        return;
+                    }
+                    event.preventDefault();
+                    callback(); // Trigger the function passed
+                }
+            });
+        }
 });
