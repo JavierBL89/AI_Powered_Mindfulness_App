@@ -21,7 +21,7 @@ https://mindfulness-ai-app.onrender.com
 https://javierbl89.github.io/MINDFULNESS-MEDITATION-Code-Institute-Project/index.html
 
 
-## Lessons Learned
+# Lessons Learned
 
  It has become an invaluable learning experience:
  

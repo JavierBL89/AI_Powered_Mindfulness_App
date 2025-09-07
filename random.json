@@ -1,0 +1,70 @@
+{
+    "answer": "To request holidays at Nuvolar, you should follow these steps:\n\n1. **Use Factorial**: All time off requests, including holidays, must be tracked and requested through the Factorial platform.\n\n2. **Choose the Type of Absence**: When making your request, select the type of absence that corresponds to your reason for time off (e.g., Holiday).\n\n3. **Request in Advance**: Ensure you request your time off with sufficient notice:\n   - For up to **2 days off**, request at least **1 week** (5 working days) in advance.\n   - For **2+ days to 1 week off**, request at least **2 weeks** (10 working days) in advance.\n   - For **1 week off or more**, request at least **twice the length** of the requested time in advance (e.g., 2 weeks off requires a 4-week notice) [confluence](https://nuvolar.atlassian.net/wiki/spaces/NuvolarHR/pages/3561455637/Time+off+policy).\n\n4. **Consider Bank Holidays and Other Time Off**: When calculating your request, exclude any bank holidays, sickness, or other time off from your request period.\n\n5. **Check with Your Team**: Before submitting your request, it's a good idea to double-check with your team and manager to ensure that the dates and length of your requested time off are acceptable.\n\n6. **Out-of-Office Notification**: When you are on vacation, make sure to add an out-of-office time entry in Factorial. Your manager will automatically receive your request and respond as soon as possible. Additionally, set up an out-of-office email that refers to a backup person to contact in your absence.\n\nIf you have any further questions or need assistance with the process, feel free to ask!",
+    "chatbotResponse": {
+        "id": "e1fcb9b9-307f-4d28-8054-6297ce4a6da7",
+        "model": "gpt-4o-mini",
+        "created": 1747667026,
+        "object": "extensions.chat.completion",
+        "choices": [
+            {
+                "index": 0,
+                "finish_reason": "stop",
+                "message": {
+                    "role": "assistant",
+                    "content": "To request holidays at Nuvolar, you should follow these steps:\n\n1. **Use Factorial**: All time off requests, including holidays, must be tracked and requested through the Factorial platform.\n\n2. **Choose the Type of Absence**: When making your request, select the type of absence that corresponds to your reason for time off (e.g., Holiday).\n\n3. **Request in Advance**: Ensure you request your time off with sufficient notice:\n   - For up to **2 days off**, request at least **1 week** (5 working days) in advance.\n   - For **2+ days to 1 week off**, request at least **2 weeks** (10 working days) in advance.\n   - For **1 week off or more**, request at least **twice the length** of the requested time in advance (e.g., 2 weeks off requires a 4-week notice) [doc1][doc3].\n\n4. **Consider Bank Holidays and Other Time Off**: When calculating your request, exclude any bank holidays, sickness, or other time off from your request period [doc1][doc3].\n\n5. **Check with Your Team**: Before submitting your request, it's a good idea to double-check with your team and manager to ensure that the dates and length of your requested time off are acceptable.\n\n6. **Out-of-Office Notification**: When you are on vacation, make sure to add an out-of-office time entry in Factorial. Your manager will automatically receive your request and respond as soon as possible. Additionally, set up an out-of-office email that refers to a backup person to contact in your absence [doc2].\n\nIf you have any further questions or need assistance with the process, feel free to ask!",
+                    "end_turn": true,
+                    "context": {
+                        "citations": [
+                            {
+                                "content": "23 days of vacation per calendar year + public bank holiday applicable for Barcelona. See bank holidays here. Check the Seniority Recognition Program since starting from the 4th year onwards vacation days can increase up to 30 days per calendar year. Carry-over policy: We are allowed to carry over 4 days from the previous calendar year. However, these need to be spent before the end of February. Depending on your seniority and the Seniority Recognition Program the carry-over may be different. Vacations should be taken in full/half-day blocks. Half days can not be requested on Fridays and during the Summer Schedule. Requesting vacation serves on a first come first served basis. Requesting time off should be done with sufficient time in advance: Up to 2 days off - request at minimum 1 week (i.e. 5 working days = 7 calendar days) in advance via Factorial. Be aware that Bank holidays, sickness, other time off, etc. need to be excluded from this request (i.e. 5 working days in advance) From 2+ days to 1 week off - request at minimum 2 weeks (i.e. 10 working days = 14 calendar days) in advance via Factorial excluding Bank holidays and other time off.\n3561455637\nHR - Spain - Employees-Freelancers.json",
+                                "title": "HR - Spain - Employees-Freelancers.json",
+                                "url": "https://nuvolar.atlassian.net/wiki/spaces/NuvolarHR/pages/3561455637/Time+off+policy",
+                                "filepath": null,
+                                "chunk_id": "0"
+                            },
+                            {
+                                "content": "be lost. Important: If you are working on a particular project for a Client, you must follow and take into consideration their own request time off policy on top - of the Client\’s internal rule to request time off (e.g. 1 day off with 2 weeks in advance) this rule has to be followed on your end as well. 1 day off on your birthday. In case your birthday falls on Saturday or Sunday, you should take a day off on Monday. In case you are not able to take a day off on your birthday due to business needs, you must take a day off within the same week. When you are on vacation, the Out-of-office time entry has to be added into Factorial, your manager will receive automatically your request and will answer it as soon as possible. The out-of-office email has to refer to a backup person to contact in your absence. How to request time off Time off of any kind should be always tracked in Factorial. Follow the steps below to request time off: Choose the type of absence corresponding to the reason for the time off: Holiday. Birthday off: In case your birthday falls on the weekend or a bank holiday, you should take the day off the week before or the week after.\n3561455637\nHR - Spain - Employees-Freelancers.json",
+                                "title": "HR - Spain - Employees-Freelancers.json",
+                                "url": "https://nuvolar.atlassian.net/wiki/spaces/NuvolarHR/pages/3561455637/Time+off+policy",
+                                "filepath": null,
+                                "chunk_id": "0"
+                            },
+                            {
+                                "content": "Schedule. Requesting vacation serves on a first come first served basis. Requesting time off should be done with sufficient time in advance: Up to 2 days off - request at minimum 1 week (i.e. 5 working days = 7 calendar days) in advance via Factorial. Be aware that Bank holidays, sickness, other time off, etc. need to be excluded from this request (i.e. 5 working days in advance) From 2+ days to 1 week off - request at minimum 2 weeks (i.e. 10 working days = 14 calendar days) in advance via Factorial excluding Bank holidays and other time off. From 1 week off and more - request at minimum twice as much of length of requested time (e.g. 2 weeks off have to be requested 4 weeks (i.e. 20 working days) in advance as a minim Note you can only carry over up to 4 days of vacation from one year to the other while spending these carry-over days by the end of February at the latest, or else the days will be lost.\n3561455637\nHR - Spain - Employees-Freelancers.json",
+                                "title": "HR - Spain - Employees-Freelancers.json",
+                                "url": "https://nuvolar.atlassian.net/wiki/spaces/NuvolarHR/pages/3561455637/Time+off+policy",
+                                "filepath": null,
+                                "chunk_id": "0"
+                            },
+                            {
+                                "content": "and other forms. Post-Training Documents: After the training, you\’ll receive three documents to fill out and sign: Evaluation questionnaire (Cuestionario de evaluaci\ón) Diploma Certificate of attendance (Certificado de asistencia) Unfortunately, these training documents are available only in Spanish, as they involve official documentation. Moreover, we will send an internal post-satisfaction survey through Factorial so you can evaluate the training. How to request and/or propose training? To select a training you should click on \“Request\”. At the same time, if you would like to propose a new topic for the soft skills training plan, please select Request a New Proposal and follow the steps. Check the video tutorial for further information. Other courses Individual Training Budget Nuvolar employees are assigned a training budget per calendar year of 500 euros. Check further details: Training Budget. Training licenses platforms At Nuvolar, we do have different licenses for learning platforms such as Udemy and Codecademy in place. All the purchased courses are available and accessible to everyone! Feel free to have a look at the courses that we already have in place.\n3846766593\nHR - Spain - Employees-Freelancers.json",
+                                "title": "HR - Spain - Employees-Freelancers.json",
+                                "url": "https://nuvolar.atlassian.net/wiki/spaces/NuvolarHR/pages/3846766593/Training+Plan+2024",
+                                "filepath": null,
+                                "chunk_id": "0"
+                            },
+                            {
+                                "content": "project planning, and avoid any last-minute time off requests. Important: If you are working on a particular project for a Client, you must follow and take into consideration their own request time off policy on top - if the Client\’s internal rule is to request time off (e.g. 1 day off with 2 weeks in advance) this rule has to be followed on your end as well. Note you can only carry over up to 4 days of vacation from one year to the other, while spending these carry-over days by the end of January at the latest, or else the days will be lost. Remember that there is no limit for the length of the vacation you can ask for (i.e. previously we had 2 consecutive weeks in a row, which is no longer applicable). At the same time before adding the time off in Factorial and waiting for the approval, make sure you double-check with your team and manager that the dates and the length are fine with them prior to making any booking, etc. How to request time off: 3. Calendar Seeing the calendar of bank holidays, company events and other important dates.\n3175219208\nHR - Spain - Employees-Freelancers.json",
+                                "title": "HR - Spain - Employees-Freelancers.json",
+                                "url": "https://nuvolar.atlassian.net/wiki/spaces/NuvolarHR/pages/3175219208/Factorial",
+                                "filepath": null,
+                                "chunk_id": "0"
+                            }
+                        ],
+                        "intent": [
+                            "how to request holidays at Nuvolar",
+                            "holiday request process Nuvolar",
+                            "vacation request procedure Nuvolar"
+                        ]
+                    }
+                }
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 8000,
+            "completion_tokens": 389,
+            "total_tokens": 8389
+        },
+        "system_fingerprint": "fp_7a53abb7a2"
+    }
+}

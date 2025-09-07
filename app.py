@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request,abort
 import json
-from models.mistral7B_chat import mistral_chat, query_llama
+from models.zephyr7B_chat import mistral_chat, query_llama
 from models.summarizator_bart_large_cnn import summarize_text
 from content_scraper.content_scraper import fetch_latest_content_and_return_python_temp_file
 from models.mood_tracker import mood_analizer
