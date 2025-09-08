@@ -6,7 +6,8 @@ import { useSummarizator } from './summarizator.js';
 document.addEventListener('DOMContentLoaded', function () {
     // AI tools buttons
     const aiToolsBtn = document.getElementById('ai-tools-main-btn');
-    const aiToolsContainer = document.getElementById('ai-tools-container');
+    const aiToolsContainer = document.getElementById('ai-tools-container')
+    
     aiToolsBtn.addEventListener('click', () => {
         aiToolsContainer.classList.toggle('expanded');
     });
@@ -15,11 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const toolButtons = document.querySelectorAll('.ai-tool-btn');
     const interactionContainer = document.getElementById('ai-interaction-container');
 
+
     toolButtons.forEach(button => {
+
         button.addEventListener('click', function () {
 
             aiToolsContainer.classList.toggle('expanded'); // close 'ai-tools-container
-
             interactionContainer.classList.remove('ai-interaction-container-hidden'); // open tool interaction container
 
             fetch(`/load_tool_template/${button.dataset.tool}`)
@@ -34,20 +36,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (button.dataset.tool === "chatbot") {
                         // Scroll to top when clicking the button
                         scrollUp();
-                        useChatBot().sendMessage();
+                         // Auto-send hello
+                         useChatBot().sendMessage("hello");
                     }
                     if (button.dataset.tool === "summarize_page") {
                         useSummarizator().summarizePageContent();
+
                     }
+                   
                 })
                 .catch(error => {
                     console.error('Error loading template:', error);
                 });
 
-
         });
     });
-
 
     // Scroll to top when clicking the button
     const scrollUp = ()=>{
@@ -73,22 +76,35 @@ document.addEventListener('DOMContentLoaded', function () {
         * pressing Enter with Shift will create
         * @returns ⚠️ Input field with id="inputId" not found
         */
-        function setupEnterKeyListener(inputId, callback, allowMultiline = false) {
+       function setupEnterKeyListener(inputId, callback, allowMultiline = false) {
             const inputField = document.getElementById(inputId);
             if (!inputField) {
                 console.warn(`⚠️ Input field with id="${inputId}" not found`);
                 return;
             }
         
-            inputField.addEventListener('keypress', function (event) {
+            // Remove any old listener to avoid duplicates
+              inputField.onkeydown = null;
+             // Add new listener
+            inputField.addEventListener('keydown', function (event) {
                 if (event.key === 'Enter') {
                     if (allowMultiline && event.shiftKey) {
-                        // Allow new line
-                        return;
+                        return; // allow newline
                     }
                     event.preventDefault();
-                    callback(); // Trigger the function passed
+                    callback(); // trigger function
                 }
             });
         }
+
+  // ----------------------------- USE THIS TO FIX KEYBOARD LISTENER ISSUES -----------------------------
+        //Attach Enter key listener after template loads
+    //     var user_input = document.getElementById('chatbot-input')
+    //     user_input.addEventListener('keydown', function (event) {
+    //       if (event.key === 'Enter') {
+    //           scrollUp();
+    //           useChatBot().sendMessage();
+    //       }
+    //   });
+    
 });

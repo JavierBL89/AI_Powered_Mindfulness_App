@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const userMood = document.querySelector('#tracker-panel input').value;
         const trackerPanel = document.querySelector('#tracker-panel');
+        const chatbotBody = document.getElementById("mood-form");
+        chatbotBody.textContent = "Analising..."; // Show loading text while waiting for response
         if (!userMood.trim()) return;
 
         fetch(`/api/mood_tracker`, {
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => {
 
                 // clean response from model
-                const chatbot_response = handleSentimentAnalizerResponse(data);
+                const chatbot_response = data.choices[0].message.content;
                 const parentElement = document.getElementById('progress-tracker');
 
                 // Clear previous response before adding a new one

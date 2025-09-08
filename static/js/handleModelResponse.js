@@ -1,21 +1,5 @@
 
 
-export const handleChatBotResponse = (data) => {
-        
-    // Extract response from API result
-    let fullResponse = data.response;
-    let botResponse = fullResponse.split("Bot:")[1]?.trim();  // Get text after 'Bot:'
-    botResponse = botResponse.split("User:")[0].trim();  // Remove extra user part
-
-    // Add line breaks before numbered steps (e.g., 1. 2. 3.)
-    botResponse = botResponse.replace(/(\d\.\s)/g, '\n$1');
-    // Add line breaks only after full sentences, avoiding abbreviations
-    botResponse = botResponse.replace(/([!?])\s+(?=[A-Z])/g, '$1\n');
-
-    return botResponse;
-}
-
-
 export const handleSummarizatorResponse = (data) => {
     // Extract response from API result
     let botResponse = data;
@@ -53,21 +37,22 @@ export const handleSentimentAnalizerResponse = (data) => {
      * Typing effect for chatbot response
      * Function to Support Line Breaks
      */
-    export const typeResponse = (responseDiv, responseText, speed = 30) => {
+    export const typeResponse = (responseDiv, responseText, speed = 10) => {
         let index = 0;
-
+        let partial = "";
+    
         const typeChar = () => {
             if (index < responseText.length) {
-                // Handle new lines as <br> when a newline character is detected
-                if (responseText.charAt(index) === '\n') {
-                    responseDiv.innerHTML += '<br>';  // Add HTML line break
-                } else {
-                    responseDiv.innerHTML += responseText.charAt(index);  // Append character
-                }
+                partial += responseText.charAt(index);
+    
+                // Convert partial markdown into safe HTML
+                const html = DOMPurify.sanitize(marked.parse(partial));
+                responseDiv.innerHTML = html;
+    
                 index++;
                 setTimeout(typeChar, speed);
             }
         };
     
-        typeChar();  // Start typing
+        typeChar();
     };

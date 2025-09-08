@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request,abort
 import json
-from models.zephyr7B_chat import mistral_chat, query_llama
+from models.lama2_chat import lama2_chat, lama2_sentiment_analyser
 from models.summarizator_bart_large_cnn import summarize_text
 from content_scraper.content_scraper import fetch_latest_content_and_return_python_temp_file
 from models.mood_tracker import mood_analizer
@@ -73,7 +73,8 @@ def load_tool_template(tool_name):
 @app.route('/api/chat', methods=['POST'])
 def chatbot():
     
-    response = mistral_chat(request)
+    response = lama2_chat(request)
+    print(response)
     return response
 
 # API Endpoint for Content Summarization
@@ -99,9 +100,8 @@ def summarize_page(page_name):
 # API Endpoint for Mood Tracking
 @app.route('/api/mood_tracker', methods=['POST'])
 def mood_tracker():
-       
-    data = request.get_json()  # This correctly extracts JSON data
-    user_input = data.get("message", "").strip()
+    print(request.json)
+    user_input = request.json.get("message", "")
     print(f"Received text: {user_input}")  # Debugging line
     
     if not isinstance(user_input, str):
@@ -126,12 +126,10 @@ def mood_tracker():
     mood = result.get("mood", "Neutral")  # Default to 'Neutral' if not found
     confidence = result.get("confidence", 0.0)  # Default to 0.0 if not found  
     # Create a properly formatted JSON string
-    user_input_json = {
-    "message": f'Please use the user input as "user_input": "{user_input}" and the sentiment analyzer model output as "result": {mood}. Generate an appropriate response that is compassionate, friendly, and provides suggestions or cheer-ups when needed.'
-}
+
     # Generate a nice reposnose using chatbot from sentiment analizer output
     # Pass the JSON object directly (not jsonify before sending it)
-    chatbot_generated_response = query_llama(user_input_json["message"])
+    chatbot_generated_response =  lama2_sentiment_analyser(user_input, mood)
     return chatbot_generated_response
 
 

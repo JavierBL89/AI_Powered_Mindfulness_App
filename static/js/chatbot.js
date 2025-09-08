@@ -1,16 +1,21 @@
-import { handleChatBotResponse, typeResponse } from "./handleModelResponse.js";
+import { typeResponse } from "./handleModelResponse.js";
 
 export const useChatBot = () => {
 
     const sendMessage = () => {
         const send_query = document.getElementById("chatbot-send");
-
+        const icon = document.getElementsByClassName("chatbot-body");
         if (send_query) {
             send_query.addEventListener('click', function() {
+
+                const chatbotBody = document.getElementById("chatbot-body");
+                chatbotBody.style.textAlign = "center"; // Align text to the left
+                chatbotBody.textContent = "Thinking..."; // Show loading text while waiting for response
+
                 const user_query = document.getElementById("chatbot-input").value;
 
                 if (!user_query.trim()) return;
-
+                console.log("User query:", user_query);
                 fetch(`/api/chat`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -19,9 +24,8 @@ export const useChatBot = () => {
                 .then(response => response.json())
                 .then(data => {
                     
-                    const chatbot_response = handleChatBotResponse(data);  // clean response from model
+                    const chatbot_response = data.choices[0].message.content;  // clean response from model
 
-                    const chatbotBody = document.getElementById("chatbot-body");
                     // Clear previous response before adding a new one
                     chatbotBody.innerHTML = '';
                     // Clear input field after sending
@@ -44,6 +48,5 @@ export const useChatBot = () => {
             console.error("Button with ID 'chatbot-send' not found.");
         }
     };
-    
     return { sendMessage };
 };

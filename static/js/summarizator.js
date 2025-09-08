@@ -53,7 +53,7 @@ export const useSummarizator = () => {
         // Create a single response element and append it
         const loadingDiv = document.createElement('div');
         loadingDiv.classList.add("summarizer-response");
-        loadingDiv.innerHTML = `<p class="summarizer-loading-text text-center"> Just a few secons while I prepare the text ...</p>`
+        loadingDiv.innerHTML = `<p class="summarizer-loading-text text-center"> Just a few secons while I prepare the text ... be patient! I am a very small model I need my time :)</p>`
         summarizatorBody.appendChild(loadingDiv);
 
         console.log("Current page:", currentPage);  // Debugging
